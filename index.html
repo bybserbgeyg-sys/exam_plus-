@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>ЭкзаменПлюс — Подготовка к ЕГЭ по Биологии</title>
+    <meta name="theme-color" content="#030712">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ЭкзаменПлюс">
+    <link rel="apple-touch-icon" href="https://n.uguu.se/iLkWiRXmVJFU.png">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2310b981'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='110' fill='url(%23g)'/%3E%3Ctext x='256' y='265' font-family='Segoe UI, Arial, sans-serif' font-size='230' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'%3E%D0%AD+%3C/text%3E%3C/svg%3E">
+    <link rel="manifest" href='data:application/manifest+json,{"name":"%D0%AD%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%9F%D0%BB%D1%8E%D1%81","short_name":"%D0%AD%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%9F%D0%BB%D1%8E%D1%81","icons":[{"src":"https://n.uguu.se/iLkWiRXmVJFU.png","sizes":"512x512","type":"image/png"}],"display":"standalone","background_color":"%23030712","theme_color":"%2310b981"}'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* АВТОНОМНЫЕ СИСТЕМНЫЕ ШРИФТЫ (РАБОТАЮТ ОФЛАЙН БЕЗ ЗАДЕРЖЕК) */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; 
+            transition: background-color 0.4s ease, color 0.4s ease; 
+            -webkit-tap-highlight-color: transparent; 
+            padding-top: env(safe-area-inset-top); 
+            padding-bottom: env(safe-area-inset-bottom); 
+        }
+        h1, h2, h3, h4 { 
+            font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* ТЕМЫ ОФОРМЛЕНИЯ */
+        body.theme-emerald { background-color: #030712; color: #f9fafb; }
+        body.theme-emerald .glow-bg-1 { background: radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, rgba(3, 7, 18, 0) 70%); }
+        body.theme-emerald .glow-bg-2 { background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(3, 7, 18, 0) 70%); }
+        body.theme-emerald .accent-text { color: #34d399; }
+        body.theme-emerald .accent-bg { background-color: #10b981; }
+
+        body.theme-ocean { background-color: #0b1329; color: #f1f5f9; }
+        body.theme-ocean .glow-bg-1 { background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(11, 19, 41, 0) 70%); }
+        body.theme-ocean .glow-bg-2 { background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(11, 19, 41, 0) 70%); }
+        body.theme-ocean .accent-text { color: #38bdf8; }
+        body.theme-ocean .accent-bg { background-color: #0284c7; }
+
+        body.theme-cyber { background-color: #0d061a; color: #fae8ff; }
+        body.theme-cyber .glow-bg-1 { background: radial-gradient(circle, rgba(217, 70, 239, 0.2) 0%, rgba(13, 6, 26, 0) 70%); }
+        body.theme-cyber .glow-bg-2 { background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, rgba(13, 6, 26, 0) 70%); }
+        body.theme-cyber .accent-text { color: #e879f9; }
+        body.theme-cyber .accent-bg { background-color: #c026d3; }
+
+        body.theme-light { background-color: #f8fafc; color: #0f172a; }
+        body.theme-light .glow-bg-1 { background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(248, 250, 252, 0) 70%); }
+        body.theme-light .glow-bg-2 { background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(248, 250, 252, 0) 70%); }
+        body.theme-light .accent-text { color: #059669; }
+        body.theme-light .accent-bg { background-color: #10b981; }
+        body.theme-light .bg-slate-900 { background-color: #ffffff !important; border-color: #e2e8f0 !important; color: #0f172a !important; }
+        body.theme-light .bg-slate-950 { background-color: #f1f5f9 !important; border-color: #cbd5e1 !important; color: #0f172a !important; }
+        body.theme-light .text-white { color: #0f172a !important; }
+        body.theme-light .text-slate-200, body.theme-light .text-slate-300 { color: #334155 !important; }
+
+        .card-slide { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+        .glow-bg-1, .glow-bg-2 {
+            position: fixed;
+            width: 650px;
+            height: 650px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-bg-1 { top: -200px; left: -150px; }
+        .glow-bg-2 { bottom: -200px; right: -150px; }
+
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 12px rgba(16, 185, 129, 0.4); }
+            50% { transform: scale(1.06); box-shadow: 0 0 22px rgba(16, 185, 129, 0.85); }
+        }
+        .active-level-pulse { animation: pulseGlow 2s infinite ease-in-out; }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .modal-animate { animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        @keyframes mascotFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(1.5deg); }
+        }
+        .mascot-bounce { animation: mascotFloat 3.5s ease-in-out infinite; }
+
+        .grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        ::-webkit-scrollbar { width: 5px; height: 5px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.4); }
+        ::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.4); border-radius: 99px; }
+    </style>
+</head>
+<body class="theme-emerald min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white relative overflow-x-hidden grid-pattern">
+
+    <div class="glow-bg-1"></div>
+    <div class="glow-bg-2"></div>
+
+    <!-- ЭКРАН 1: ГЛАВНОЕ МЕНЮ -->
+    <div id="screen-main" class="w-full min-h-screen flex flex-col justify-between py-6 relative z-10">
+        <header class="w-full px-5 sm:px-12 mb-4 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5">
+                <div class="bg-gradient-to-tr from-emerald-500 via-teal-500 to-cyan-500 text-slate-950 p-3.5 rounded-2xl shadow-lg shadow-emerald-500/20 transform hover:rotate-6 transition-transform">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                </div>
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-black tracking-tight text-white flex items-center gap-2">
+                        ЭкзаменПлюс <span class="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full uppercase tracking-widest font-extrabold">2026</span>
+                    </h1>
+                    <p class="text-xs sm:text-sm accent-text font-semibold flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Спецификация ФИПИ & Теория
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                <!-- РЕАЛЬНЫЙ ЕЖЕДНЕВНЫЙ ВХОД (БИО-СТРИК) -->
+                <div id="streak-card" title="Пройдите минимум 1 уровень сегодня, чтобы засчитать день!" class="bg-slate-900/90 border border-slate-800/80 backdrop-blur-xl px-3.5 py-2 rounded-2xl flex items-center gap-2.5 shadow-xl transition-all">
+                    <div class="relative flex items-center justify-center">
+                        <span class="text-xl sm:text-2xl">🧫</span>
+                        <span id="streak-dot" class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-amber-400 border-2 border-slate-900 animate-pulse"></span>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <p class="text-[9px] uppercase font-black text-slate-400 tracking-wider">Био-Стрик</p>
+                            <span id="streak-status-badge" class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400">Пройди 1 лвл</span>
+                        </div>
+                        <p id="streak-days-text" class="text-xs sm:text-sm font-black accent-text">0 дней подряд</p>
+                    </div>
+                </div>
+
+                <!-- Выбор темы оформления -->
+                <div class="relative">
+                    <button id="theme-toggle-btn" onclick="toggleThemeMenu(event)" title="Сменить тему" class="w-11 h-11 rounded-2xl bg-slate-900/90 border border-slate-800/80 hover:border-emerald-400 flex items-center justify-center text-slate-300 hover:text-white transition-all cursor-pointer shadow-lg active:scale-95">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                    </button>
+                    <div id="theme-menu" class="hidden absolute right-0 mt-2 w-48 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-2xl p-2 z-50 space-y-1 backdrop-blur-xl">
+                        <button onclick="setAppTheme('emerald')" class="w-full text-left px-3 py-2 rounded-xl text-xs font-bold hover:bg-slate-800/80 flex items-center gap-2 text-emerald-400 cursor-pointer">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span> Изумруд Неон
+                        </button>
+                        <button onclick="setAppTheme('ocean')" class="w-full text-left px-3 py-2 rounded-xl text-xs font-bold hover:bg-slate-800/80 flex items-center gap-2 text-sky-400 cursor-pointer">
+                            <span class="w-3 h-3 rounded-full bg-sky-500"></span> Глубокий Океан
+                        </button>
+                        <button onclick="setAppTheme('cyber')" class="w-full text-left px-3 py-2 rounded-xl text-xs font-bold hover:bg-slate-800/80 flex items-center gap-2 text-fuchsia-400 cursor-pointer">
+                            <span class="w-3 h-3 rounded-full bg-fuchsia-500"></span> Кибер Биология
+                        </button>
+                        <button onclick="setAppTheme('light')" class="w-full text-left px-3 py-2 rounded-xl text-xs font-bold hover:bg-slate-800/80 flex items-center gap-2 text-slate-500 cursor-pointer">
+                            <span class="w-3 h-3 rounded-full bg-slate-300 border border-slate-400"></span> Дневной Лаб
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Переключатель звука -->
+                <button id="sound-btn" onclick="toggleSound()" title="Вкл/Выкл Звук" class="w-11 h-11 rounded-2xl bg-slate-900/90 border border-slate-800/80 hover:border-emerald-400 flex items-center justify-center text-emerald-400 transition-all cursor-pointer shadow-lg active:scale-95">
+                    <svg id="sound-icon-on" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                    <svg id="sound-icon-off" class="w-5 h-5 hidden text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zM17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <section class="w-full px-5 sm:px-12 mb-6">
+            <h2 class="text-2xl sm:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-emerald-400 uppercase drop-shadow-sm text-left">
+                БИОЛОГИЯ НА 90+? — <span class="accent-text underline decoration-emerald-500/30 decoration-wavy">ЛЕГКО!</span>
+            </h2>
+        </section>
+
+        <main class="w-full px-5 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start flex-grow">
+            <!-- Левая колонка: Выбор раздела + Кнопка Работы над ошибками -->
+            <div class="lg:col-span-5 flex flex-col items-start w-full max-w-md relative">
+                <div class="w-full relative h-[80px]" id="deck-container"></div>
+
+                <div class="w-full mt-5 bg-slate-900/90 backdrop-blur-xl border border-slate-800/90 rounded-3xl p-6 shadow-2xl relative overflow-hidden group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-[11px] font-extrabold uppercase tracking-widest accent-text bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Активное направление</span>
+                        <span id="subject-emoji" class="text-2xl">🧪</span>
+                    </div>
+                    <p id="progress-text" class="text-slate-200 text-sm sm:text-base font-medium leading-relaxed">
+                        Освоение раздела <span id="selected-subject-name" class="font-black accent-text">Биоинженерия ДНК</span>: <span id="progress-percent" class="font-black text-teal-400">0%</span>
+                    </p>
+                    <div class="w-full bg-slate-950/80 h-3.5 rounded-full mt-4 overflow-hidden border border-slate-800 p-0.5">
+                        <div id="progress-bar" class="accent-bg h-full rounded-full transition-all duration-700 shadow-md" style="width: 0%;"></div>
+                    </div>
+                    <button onclick="goToPathScreen()" class="w-full mt-5 py-4 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black rounded-2xl shadow-xl shadow-emerald-500/20 transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2.5 cursor-pointer text-sm">
+                        <span>Открыть карту уровней</span>
+                        <span>→</span>
+                    </button>
+
+                    <!-- КНОПКА: РАБОТА НАД ОШИБКАМИ -->
+                    <button id="btn-mistakes-mode" onclick="startMistakesTraining()" class="w-full mt-3 py-3.5 bg-slate-950 hover:bg-rose-500/15 border border-slate-800 hover:border-rose-500/50 text-slate-300 font-extrabold rounded-2xl transition-all flex items-center justify-between px-4 cursor-pointer text-xs sm:text-sm">
+                        <span class="flex items-center gap-2">
+                            <span>🩹</span>
+                            <span>Работа над ошибками</span>
+                        </span>
+                        <span id="mistakes-count-badge" class="bg-slate-800 text-slate-400 px-2.5 py-0.5 rounded-full text-xs font-black">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Правая колонка: МАСКОТ + Факты и Прогресс -->
+            <div class="lg:col-span-7 w-full flex flex-col gap-6">
+                
+                <!-- БЛОК МАСКОТА ПТИЧКИ «ПРОФЕССОР ПЕРЫШКИН» -->
+                <div class="bg-slate-900/90 backdrop-blur-xl border border-slate-800/90 rounded-3xl p-5 sm:p-6 shadow-2xl relative flex items-center gap-4 sm:gap-5 overflow-hidden group">
+                    <div onclick="clickMascot()" class="relative cursor-pointer shrink-0 mascot-bounce">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-transparent border-2 border-sky-400/30 flex items-center justify-center shadow-lg relative group-hover:scale-105 transition-all">
+                            <picture class="w-full h-full flex items-center justify-center">
+                                <source srcset="mascot.webp" type="image/webp" />
+                                <img src="mascot.gif" alt="Профессор Пёрышкин" class="w-full h-full object-contain select-none pointer-events-none" />
+                            </picture>
+                            <span class="absolute -top-3.5 text-xl">🎓</span>
+                        </div>
+                        <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-slate-950 font-black text-[9px] px-2 py-0.5 rounded-full uppercase shadow-md flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span> Наставник
+                        </span>
+                    </div>
+
+                    <div class="flex-grow">
+                        <div class="flex items-center justify-between mb-1.5 flex-wrap gap-1">
+                            <h4 class="font-extrabold text-white text-base sm:text-lg flex items-center gap-2">
+                                Профессор Пёрышкин <span class="text-xs font-normal text-slate-400">(Био-гид)</span>
+                            </h4>
+                            <span class="text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">Нажми на меня! 👆</span>
+                        </div>
+                        <div class="bg-slate-950/80 border border-slate-800/80 p-3.5 rounded-2xl relative shadow-inner">
+                            <p id="mascot-speech" class="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">
+                                Перед тестом изучи сплошной конспект материала, а затем сдай тест из 10 вопросов без ошибок! Все промахи сохраняются в «Работу над ошибками».
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок Советов -->
+                <div class="bg-slate-900/90 backdrop-blur-xl border border-slate-800/90 rounded-3xl p-6 sm:p-7 shadow-2xl relative min-h-[145px] flex flex-col justify-between overflow-hidden">
+                    <div>
+                        <span class="text-[10px] font-extrabold uppercase tracking-widest accent-text bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-500/20 inline-flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Ловушка экзаменаторов
+                        </span>
+                        <p id="fact-text" class="text-slate-200 text-sm sm:text-lg mt-3.5 leading-relaxed font-medium">Загрузка...</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800/80 flex justify-between items-center text-xs text-slate-400">
+                        <span class="flex items-center gap-1.5">💡 Ключи ФИПИ</span>
+                        <button onclick="nextFact()" class="accent-text hover:underline font-bold cursor-pointer">Следующий лайфхак →</button>
+                    </div>
+                </div>
+
+                <!-- Общий прогресс -->
+                <div class="bg-slate-900/90 backdrop-blur-xl border border-slate-800/90 rounded-3xl p-6 sm:p-7 shadow-2xl">
+                    <div class="flex items-center justify-between mb-5 pb-4 border-b border-slate-800">
+                        <div>
+                            <h3 class="text-lg font-bold text-white flex items-center gap-2"><span>📊</span> Общий прогресс подготовки</h3>
+                            <p class="text-xs text-slate-400 mt-0.5">Изучено конспектов и сдано тестов</p>
+                        </div>
+                        <div class="flex items-center gap-3 bg-amber-500/10 border border-amber-500/20 px-3.5 py-1.5 rounded-2xl">
+                            <span class="text-2xl animate-bounce">🎯</span>
+                            <div>
+                                <p class="text-[9px] text-amber-400 font-bold uppercase tracking-wider">Готовность</p>
+                                <p id="total-progress-percent" class="text-base font-black text-amber-300">0%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="user-subjects-list"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- ЭКРАН 2: КАРТА УРОВНЕЙ И ДОРОГА КОНСПЕКТОВ + ТЕСТОВ -->
+    <div id="screen-path" class="w-full min-h-screen hidden flex-col justify-between py-6 relative z-10">
+        <header class="w-full px-5 sm:px-12 flex items-center justify-between mb-4 gap-3">
+            <div class="flex items-center gap-3">
+                <span id="path-subject-emoji" class="text-3xl">🧪</span>
+                <h1 id="path-subject-title" class="text-xl sm:text-4xl font-black text-white uppercase tracking-wider">
+                    БИОИНЖЕНЕРИЯ ДНК
+                </h1>
+            </div>
+
+            <button onclick="goToMainScreen()" class="px-4 sm:px-5 py-2.5 bg-slate-900 border border-slate-800 hover:border-emerald-400 text-slate-200 hover:text-white rounded-2xl font-bold text-xs sm:text-sm shadow-xl transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2 cursor-pointer shrink-0">
+                <span class="text-emerald-400">←</span>
+                <span>На главную</span>
+            </button>
+        </header>
+
+        <main class="w-full flex-grow flex flex-col justify-center my-4 overflow-hidden">
+            <div class="w-full px-5 sm:px-12 max-w-6xl mx-auto flex items-center justify-between mb-5 gap-4">
+                <div class="flex items-center gap-3 overflow-hidden">
+                    <div id="module-switcher" class="flex items-center gap-1 bg-slate-950/80 border border-slate-800 rounded-full p-1 shrink-0">
+                    </div>
+                    <h3 id="current-theme-title" class="text-base sm:text-2xl font-bold text-slate-100 truncate">
+                        Название темы
+                    </h3>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0">
+                    <button id="rules-btn-icon" onclick="openRulesModal()" title="Шпаргалка по разделу" class="w-10 h-10 rounded-full bg-emerald-500/20 border-2 border-emerald-400 hover:bg-emerald-500 text-emerald-300 hover:text-white flex items-center justify-center font-black text-lg transition-all shadow-lg shadow-emerald-500/20 cursor-pointer transform hover:scale-110 active:scale-95">
+                        ?
+                    </button>
+                </div>
+            </div>
+
+            <!-- КАРТА 11 ЭТАПОВ (ТЕОРИЯ 1 -> ТЕСТ 1 (10 ВОПРОСОВ) -> ... -> ФИНАЛ) -->
+            <div class="w-full max-w-6xl mx-auto px-5 sm:px-12">
+                <div class="bg-slate-900/85 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+                    <div class="flex items-center justify-between gap-3 overflow-x-auto pb-4 pt-2 scroll-smooth" id="levels-container"></div>
+
+                    <div class="flex flex-wrap justify-between items-center mt-6 pt-4 border-t border-slate-800/80 text-xs text-slate-400 gap-2">
+                        <div class="flex items-center gap-4 flex-wrap">
+                            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-teal-500 inline-block"></span> 📖 Сплошной конспект материала</span>
+                            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-amber-500 inline-block"></span> 🎯 Тест (10 вопросов)</span>
+                        </div>
+                        <span class="text-slate-500">Карта автоматически центрируется на текущем уровне →</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="w-full px-6 sm:px-12 text-center text-xs text-slate-600">
+            ЭкзаменПлюс — Пошаговая система подготовки к ЕГЭ 2026
+        </footer>
+    </div>
+
+
+    <!-- МОДАЛЬНОЕ ОКНО: СПРАВОЧНЫЙ МАТЕРИАЛ (СПЛОШНОЙ ТЕКСТ ПЕРЕД ТЕСТОМ) -->
+    <div id="modal-pre-level" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative modal-animate max-h-[92vh] flex flex-col">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-800 shrink-0">
+                <h3 id="pre-level-title" class="text-base sm:text-xl font-black text-white flex items-center gap-2">
+                    <span class="accent-text text-xl sm:text-2xl">📖</span> Справочный материал
+                </h3>
+                <button onclick="closePreLevelModal()" class="w-9 h-9 rounded-xl bg-slate-800/80 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer font-bold">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Сплошной структурированный текст справочника -->
+            <div id="pre-level-guide-text" class="overflow-y-auto pr-2 space-y-4 text-sm sm:text-base text-slate-200 leading-relaxed bg-slate-950/90 p-5 sm:p-6 rounded-2xl border border-slate-800 flex-grow"></div>
+
+            <!-- Кнопка подтверждения изучения материала: закрывает окно и открывает доступ к уровню -->
+            <div class="pt-4 mt-4 border-t border-slate-800 shrink-0">
+                <button onclick="completeGuide()" class="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black rounded-2xl transition-all shadow-lg shadow-emerald-500/25 active:scale-95 cursor-pointer text-sm sm:text-base">
+                    Я готов! ✅
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- МОДАЛЬНОЕ ОКНО: ШПАРГАЛКА -->
+    <div id="modal-rules" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative modal-animate">
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-800">
+                <h3 id="rules-modal-title" class="text-xl font-bold text-white flex items-center gap-2">
+                    <span class="accent-text text-2xl">❓</span> Ключевые тезисы раздела
+                </h3>
+                <button onclick="closeRulesModal()" class="text-slate-400 hover:text-white text-xl cursor-pointer font-bold">
+                    ✕
+                </button>
+            </div>
+            <div id="rules-modal-content" class="space-y-4 text-sm text-slate-300 leading-relaxed max-h-[60vh] overflow-y-auto pr-2"></div>
+            <button onclick="closeRulesModal()" class="w-full mt-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-2xl transition-all cursor-pointer active:scale-95">Понятно!</button>
+        </div>
+    </div>
+
+
+    <!-- МОДАЛЬНОЕ ОКНО: ОСНОВНОЙ ТЕСТ (10 ВОПРОСОВ), ФИНАЛ И РАБОТА НАД ОШИБКАМИ -->
+    <div id="modal-test" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative modal-animate max-h-[92vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <span id="test-title-badge" class="text-xs font-bold uppercase tracking-wider accent-text bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Тест</span>
+                <span id="test-counter" class="text-xs text-slate-400 font-medium">Вопрос 1 из 10</span>
+            </div>
+
+            <div class="w-full bg-slate-800 h-1.5 rounded-full mb-6 overflow-hidden">
+                <div id="test-progress-bar" class="bg-emerald-500 h-full transition-all duration-300" style="width: 10%;"></div>
+            </div>
+
+            <h4 id="test-question-text" class="text-base sm:text-xl font-bold text-white mb-6 leading-snug whitespace-pre-line">Загрузка вопроса...</h4>
+
+            <div id="test-options-container" class="space-y-3 mb-6"></div>
+
+            <!-- БЛОК РАЗБОРА ОШИБКИ С УЧЁНОЙ ПТИЧКОЙ -->
+            <div id="error-explanation-box" class="hidden bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 mb-6 text-left relative overflow-hidden">
+                <div class="flex items-start gap-3">
+                    <picture class="w-9 h-9 shrink-0 flex items-center justify-center"><source srcset="mascot.webp" type="image/webp" /><img src="mascot.gif" alt="" class="w-9 h-9 object-contain shrink-0" /></picture>
+                    <div>
+                        <div class="flex items-center gap-2 text-amber-400 font-bold text-sm mb-1">
+                            Разбор Пёрышкина (Ключ ФИПИ):
+                        </div>
+                        <p id="error-explanation-text" class="text-xs text-slate-200 leading-relaxed"></p>
+                    </div>
+                </div>
+                <button onclick="nextQuestionAfterError()" class="mt-3 w-full py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs transition-all cursor-pointer active:scale-95">
+                    Понятно, следующий вопрос →
+                </button>
+            </div>
+
+            <div class="flex justify-end gap-3">
+                <button onclick="closeTestModal()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-sm cursor-pointer active:scale-95">Выйти</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // ==========================================
+        // 1. ЗВУКОВОЙ ДВИЖОК (WEB AUDIO API)
+        // ==========================================
+        let soundEnabled = true;
+        let audioCtx = null;
+
+        function playSound(type) {
+            if (!soundEnabled) return;
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'correct') {
+                    osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(659.25, audioCtx.currentTime + 0.15);
+                    gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.25);
+                } else if (type === 'wrong') {
+                    osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(164.81, audioCtx.currentTime + 0.2);
+                    gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.3);
+                } else if (type === 'win') {
+                    osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.35);
+                    gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.45);
+                }
+            } catch(e) {}
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            document.getElementById('sound-icon-on').classList.toggle('hidden', !soundEnabled);
+            document.getElementById('sound-icon-off').classList.toggle('hidden', soundEnabled);
+        }
+
+        // ==========================================
+        // 2. АЛГОРИТМ ПЕРЕМЕШИВАНИЯ ВАРИАНТОВ ОТВЕТА
+        // ==========================================
+        function prepareShuffledQuestion(rawQuestion) {
+            const indexedOptions = rawQuestion.options.map((text, idx) => ({
+                text: text,
+                isCorrect: idx === rawQuestion.correct
+            }));
+
+            for (let i = indexedOptions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [indexedOptions[i], indexedOptions[j]] = [indexedOptions[j], indexedOptions[i]];
+            }
+
+            const newCorrectIndex = indexedOptions.findIndex(item => item.isCorrect);
+
+            return {
+                q: rawQuestion.q,
+                options: indexedOptions.map(item => item.text),
+                correct: newCorrectIndex,
+                exp: rawQuestion.exp || ""
+            };
+        }
+
+        // ==========================================
+        // 3. СИСТЕМА ЕЖЕДНЕВНОГО ВХОДА (БИО-СТРИК)
+        // ==========================================
+        function getTodayKey() {
+            const d = new Date();
+            return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        }
+
+        function getYesterdayKey() {
+            const d = new Date();
+            d.setDate(d.getDate() - 1);
+            return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        }
+
+        function getStreakState() {
+            try {
+                const raw = localStorage.getItem('exam_plus_real_streak');
+                return raw ? JSON.parse(raw) : { count: 0, lastCompletedDay: null };
+            } catch (e) {
+                return { count: 0, lastCompletedDay: null };
+            }
+        }
+
+        function refreshStreakUI() {
+            const state = getStreakState();
+            const today = getTodayKey();
+            const yesterday = getYesterdayKey();
+
+            let displayCount = state.count;
+            let completedToday = (state.lastCompletedDay === today);
+
+            if (state.lastCompletedDay && state.lastCompletedDay !== today && state.lastCompletedDay !== yesterday) {
+                displayCount = 0;
+                localStorage.setItem('exam_plus_real_streak', JSON.stringify({ count: 0, lastCompletedDay: null }));
+            }
+
+            document.getElementById('streak-days-text').innerText = `${displayCount} ${getStreakWord(displayCount)} подряд`;
+
+            const badge = document.getElementById('streak-status-badge');
+            const dot = document.getElementById('streak-dot');
+            const card = document.getElementById('streak-card');
+
+            if (completedToday) {
+                badge.innerText = "Засчитано ✓";
+                badge.className = "text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400";
+                dot.className = "absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-slate-900";
+                card.classList.add('border-emerald-500/40');
+            } else {
+                badge.innerText = "Пройди 1 лвл";
+                badge.className = "text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400";
+                dot.className = "absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-amber-400 border-2 border-slate-900 animate-pulse";
+                card.classList.remove('border-emerald-500/40');
+            }
+        }
+
+        function registerDailyLevelCompletion() {
+            const state = getStreakState();
+            const today = getTodayKey();
+            const yesterday = getYesterdayKey();
+
+            if (state.lastCompletedDay === today) {
+                refreshStreakUI();
+                return false;
+            }
+
+            let newCount = 1;
+            if (state.lastCompletedDay === yesterday) {
+                newCount = state.count + 1;
+            }
+
+            localStorage.setItem('exam_plus_real_streak', JSON.stringify({
+                count: newCount,
+                lastCompletedDay: today
+            }));
+
+            refreshStreakUI();
+            return true;
+        }
+
+        function getStreakWord(num) {
+            if (num % 10 === 1 && num % 100 !== 11) return 'день';
+            if ([2,3,4].includes(num % 10) && ![12,13,14].includes(num % 100)) return 'дня';
+            return 'дней';
+        }
+
+        // ==========================================
+        // 4. СИСТЕМА «РАБОТА НАД ОШИБКАМИ»
+        // ==========================================
+        function getMistakesBank() {
+            try {
+                const raw = localStorage.getItem('exam_plus_mistakes_v1');
+                return raw ? JSON.parse(raw) : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function recordMistake(rawQuestion, subjectName) {
+            const bank = getMistakesBank();
+            const exists = bank.some(item => item.q === rawQuestion.q);
+            if (!exists) {
+                bank.push({
+                    q: rawQuestion.q,
+                    options: rawQuestion.options,
+                    correct: rawQuestion.correct,
+                    exp: rawQuestion.exp || ("Правильный ответ: " + rawQuestion.options[rawQuestion.correct]),
+                    subject: subjectName
+                });
+                localStorage.setItem('exam_plus_mistakes_v1', JSON.stringify(bank));
+                updateMistakesUI();
+            }
+        }
+
+        function removeMistake(questionText) {
+            let bank = getMistakesBank();
+            bank = bank.filter(item => item.q !== questionText);
+            localStorage.setItem('exam_plus_mistakes_v1', JSON.stringify(bank));
+            updateMistakesUI();
+        }
+
+        function updateMistakesUI() {
+            const count = getMistakesBank().length;
+            const badge = document.getElementById('mistakes-count-badge');
+            const btn = document.getElementById('btn-mistakes-mode');
+
+            badge.innerText = count;
+            if (count > 0) {
+                badge.className = "bg-rose-500 text-white px-2.5 py-0.5 rounded-full text-xs font-black animate-pulse";
+                btn.classList.add('border-rose-500/40', 'text-rose-200');
+            } else {
+                badge.className = "bg-slate-800 text-slate-400 px-2.5 py-0.5 rounded-full text-xs font-black";
+                btn.classList.remove('border-rose-500/40', 'text-rose-200');
+            }
+        }
+
+        // ==========================================
+        // 5. БАЗА ДАННЫХ: КОНСПЕКТ + 10 ВОПРОСОВ НА УРОВЕНЬ
+        // ==========================================
+        const mascotQuotes = [
+            "Сначала внимательно прочитай справочный конспект перед тестом — в нём спрятаны ответы на все 10 вопросов!",
+            "Варианты ответов перемешиваются при каждом запуске — запомнить «кнопку №1» не выйдет, только реальные знания!",
+            "Все вопросы, где ты ошибся в тесте, автоматически сохраняются в «Работу над ошибками» на главном экране.",
+            "В заданиях ФИПИ на ПЦР количество молекул ДНК после n циклов вычисляется по формуле N = N₀ × 2ⁿ!",
+            "Помни: Рестриктазы режут ДНК по палиндромам, Лигазы сшивают фосфодиэфирные связи, а Taq-полимераза работает при 72°C!"
+        ];
+
+        function clickMascot() {
+            playSound('correct');
+            const randomQuote = mascotQuotes[Math.floor(Math.random() * mascotQuotes.length)];
+            document.getElementById('mascot-speech').innerText = randomQuote;
+        }
+
+        function toggleThemeMenu(e) {
+            if (e) e.stopPropagation();
+            document.getElementById('theme-menu').classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('theme-menu');
+            const btn = document.getElementById('theme-toggle-btn');
+            if (menu && !menu.contains(e.target) && btn && !btn.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        function setAppTheme(themeName) {
+            document.body.className = `theme-${themeName} min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white relative overflow-x-hidden grid-pattern`;
+            localStorage.setItem('exam_plus_theme', themeName);
+            document.getElementById('theme-menu').classList.add('hidden');
+        }
+
+        const subjects = [
+            { id: "bioeng", name: "Биоинженерия ДНК", emoji: "🧪" }
+        ];
+
+        const facts = [
+            "В заданиях №27 ЕГЭ на биосинтез белка всегда учитывайте антипараллельность цепей ДНК и иРНК (5'→3' и 3'→5').",
+            "Рестриктазы режут палиндромные участки ДНК с образованием «липких» или «тупых» концов.",
+            "Для ПЦР используется Taq-полимераза из термофильной бактерии Thermus aquaticus, выдерживающей нагрев до 95°C.",
+            "При гель-электрофорезе отрицательно заряженные молекулы ДНК движутся от катода (–) к аноду (+)."
+        ];
+
+        const subjectThemesData = {
+            "Биоинженерия ДНК": [
+                {
+                    id: 1,
+                    title: "Технологии генной инженерии и молекулярной биологии",
+                    rulesHtml: `
+                        <p class="text-slate-200 font-bold mb-2">Шпаргалка по Биоинженерии ДНК (ЕГЭ):</p>
+                        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
+                            <li><b>Рестриктазы:</b> «молекулярные ножницы», режут ДНК по сайтам рестрикции (палиндромам).</li>
+                            <li><b>ДНК-лигазы:</b> «молекулярный клей», сшивают фосфодиэфирные связи.</li>
+                            <li><b>Плазмиды:</b> кольцевые ДНК бактерий, служат векторами переноса генов.</li>
+                            <li><b>ПЦР:</b> 95°C (денатурация) → 55°C (отжиг) → 72°C (элонгация). Число копий = 2ⁿ.</li>
+                            <li><b>CRISPR-Cas9:</b> гидовая РНК наводит нуклеазу Cas9 на нужный ген.</li>
+                        </ul>
+                    `,
+                    tpsmData: {
+                        1: {
+                            name: "Справочник 1: Рестриктазы и фрагментация ДНК",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">1. Эндонуклеазы рестрикции (Рестриктазы)</h5>
+                                <p><b>Рестриктазы</b> — это группа бактериальных ферментов белковой природы, которые распознают строго определенные короткие последовательности нуклеотидов в двуцепочечной ДНК (обычно длиной 4–8 пар оснований) и расщепляют внутри них ковалентные <b>фосфодиэфирные связи</b> в сахарофосфатном остове.</p>
+                                <p><b>Палиндромные последовательности:</b> Участки узнавания (сайты рестрикции) обладают центральной симметрией — они читаются одинаково в направлении <b>5' → 3'</b> по обеим комплементарным цепям ДНК. Классический пример — сайт узнавания фермента <i>EcoRI</i> (выделенного из кишечной палочки <i>Escherichia coli</i>): 5'-GAATTC-3'.</p>
+                                <p><b>Липкие и тупые концы:</b> В зависимости от того, как рестриктаза разрезает обе цепи ДНК, образуются два типа концов. Если разрез сдвинут от центра симметрии (ступенчатый разрез, например между G и A в последовательности GAATTC), образуются выступающие одноцепочечные участки — <b>«липкие концы»</b>. Они способны комплементарно соединяться за счет водородных связей с любыми другими фрагментами ДНК, разрезанными той же рестриктазой. Если же обе цепи разрезаются строго напротив друг друга, образуются <b>«тупые концы»</b>, которые сшивать гораздо сложнее.</p>
+                                <p><b>Биологическая роль и защита:</b> В живой природе система рестрикции-модификации служит врожденным иммунитетом бактерий против вирусов — <b>бактериофагов</b>, разрезая их чужеродную ДНК при проникновении в клетку. Чтобы не уничтожить собственную хромосому, бактерия использует ферменты <b>ДНК-метилазы</b>, которые присоединяют метильные группы (–CH₃) к азотистым основаниям в сайтах рестрикции своей ДНК, делая их невидимыми для рестриктаз.</p>
+                            `
+                        },
+                        2: {
+                            name: "Справочник 2: Плазмидные векторы и ДНК-лигазы",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">2. Векторные системы и создание рекомбинантной ДНК</h5>
+                                <p>Чтобы доставить выделенный целевой ген (например, ген человеческого инсулина или соматотропина) в клетку-реципиент и обеспечить его стабильное размножение, используют молекулы-переносчики — <b>векторы</b>. Самыми распространенными векторами в биотехнологии являются <b>плазмиды</b>.</p>
+                                <p><b>Строение плазмид:</b> Плазмиды — это небольшие кольцевые двуцепочечные молекулы ДНК, расположенные в цитоплазме бактерий автономно от основной бактериальной хромосомы (нуклеоида). Поскольку бактерии относятся к прокариотам, ядерной оболочки у них нет.</p>
+                                <p><b>Три обязательных элемента лабораторного плазмидного вектора:</b><br>
+                                1. <b>Сайт инициации репликации (ori):</b> точка начала удвоения, позволяющая плазмиде самостоятельно копироваться в клетке независимо от деления основной хромосомы.<br>
+                                2. <b>Полилинкер (сайт множественного клонирования):</b> короткий участок ДНК, содержащий уникальные сайты узнавания для разных рестриктаз, куда встраивается нужный ген.<br>
+                                3. <b>Селективный маркер:</b> чаще всего ген устойчивости к определенному антибиотику (например, ампициллину или тетрациклину). После введения плазмид в бактерии (этот процесс называется <b>трансформацией</b>) клетки высевают на среду с антибиотиком: выживают только те колонии, которые успешно поглотили вектор с защитным геном.</p>
+                                <p><b>Сборка рекомбинантной ДНК:</b> Сначала плазмиду и донорскую ДНК с нужным геном обрабатывают <b>одной и той же рестриктазой</b> для получения комплементарных липких концов. Затем после их сближения фермент <b>ДНК-лигаза</b> («молекулярный клей») восстанавливает ковалентные фосфодиэфирные связи, замыкая конструкцию в единую кольцевую <b>рекомбинантную ДНК</b>.</p>
+                            `
+                        },
+                        3: {
+                            name: "Справочник 3: Полимеразная цепная реакция (ПЦР)",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">3. Технология ПЦР, ферменты и расчёт циклов</h5>
+                                <p><b>Полимеразная цепная реакция (ПЦР)</b> — метод молекулярной биологии, позволяющий многократно избирательно копировать (амплифицировать) определенный участок ДНК в пробирке (<i>in vitro</i>) из ничтожно малого количества исходного материала.</p>
+                                <p><b>Необходимые компоненты реакционной смеси:</b> ДНК-матрица с искомым участком; пара специфических <b>праймеров</b> (коротких искусственных одноцепочечных затравок длиной 18–25 нуклеотидов, ограничивающих копируемый фрагмент с двух сторон); свободные дезоксирибонуклеотидтрифосфаты (<b>dNTP</b> — строительный материал: dATP, dTTP, dGTP, dCTP); буферный раствор с ионами магния (Mg²⁺) и термостабильная <b>Taq-полимераза</b>.</p>
+                                <p><b>Три температурных этапа одного цикла ПЦР:</b><br>
+                                • <b>1. Денатурация (94–96°C):</b> высокий нагрев разрушает водородные связи между комплементарными азотистыми основаниями, разделяя двуцепочечную ДНК на две одиночные цепи.<br>
+                                • <b>2. Отжиг праймеров (50–65°C):</b> при охлаждении праймеры комплементарно связываются с 3'-концами целевого участка на обеих цепях матрицы.<br>
+                                • <b>3. Элонгация (72°C):</b> при оптимальной температуре термостабильная <b>Taq-полимераза</b> (выделенная из бактерии горячих источников <i>Thermus aquaticus</i>) присоединяет нуклеотиды к 3'-OH концам праймеров, синтезируя новые цепи строго в направлении <b>5' → 3'</b>.</p>
+                                <p><b>Формула расчёта для ЕГЭ:</b> За каждый цикл число копий удваивается. Если исходно было <b>N₀</b> молекул ДНК, то после <b>n</b> циклов образуется <b>N = N₀ × 2ⁿ</b> молекул.</p>
+                            `
+                        },
+                        4: {
+                            name: "Справочник 4: Гель-электрофорез и секвенирование ДНК",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">4. Разделение фрагментов и чтение последовательности ДНК</h5>
+                                <p><b>Гель-электрофорез</b> — лабораторный метод разделения макромолекул (ДНК, РНК или белков) по их длине (молекулярной массе) и заряду под действием постоянного электрического поля.</p>
+                                <p><b>Физико-химический принцип:</b> В сахарофосфатном остове ДНК каждый нуклеотид содержит остаток фосфорной кислоты, который в нейтральном или слабощелочном буфере диссоциирует и придает всей молекуле ДНК суммарный <b>отрицательный заряд (–)</b>. При включении тока отрицательно заряженные фрагменты ДНК всегда движутся от отрицательного электрода (<b>катода, –</b>) к положительному электроду (<b>аноду, +</b>).</p>
+                                <p><b>Молекулярное сито:</b> Образцы ДНК вносят в лунки пористого геля (обычно из <b>агарозы</b> или полиакриламида). Гель работает как сито: <b>короткие</b> и легкие фрагменты ДНК легко проскакивают сквозь поры и убегают далеко к аноду (+), тогда как <b>длинные</b> и массивные молекулы сильнее застревают в сетке геля и остаются ближе к стартовым лункам у катода (–). Для визуализации полос используют флуоресцентные красители (например, бромистый этидий), светящиеся в ультрафиолете.</p>
+                                <p><b>Секвенирование ДНК:</b> Это группа методов (классический метод обрыва цепи по Сэнгеру и высокопроизводительное секвенирование нового поколения NGS), позволяющих установить точную первичную последовательность нуклеотидов (А, Т, Г, Ц) в молекуле ДНК.</p>
+                            `
+                        },
+                        5: {
+                            name: "Справочник 5: Система CRISPR-Cas9 и геномное редактирование",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">5. Точечное редактирование генома CRISPR-Cas9</h5>
+                                <p><b>CRISPR-Cas9</b> — передовая технология направленного изменения геномов живых организмов, созданная на основе системы адаптивного противовирусного иммунитета бактерий и архей. В природе бактерии сохраняют короткие фрагменты ДНК победивших их вирусов в специальных участках генома (кассетах CRISPR), чтобы при повторной атаке быстро распознать и разрезать вирусную ДНК.</p>
+                                <p><b>Устройство лабораторного комплекса CRISPR-Cas9:</b><br>
+                                1. <b>Гидовая (направляющая) РНК (gRNA):</b> искусственно синтезированная молекула РНК, содержащая последовательность из ~20 нуклеотидов, строго комплементарную тому участку гена в клетке, который ученые хотят отредактировать.<br>
+                                2. <b>Белок Cas9:</b> фермент-эндонуклеаза («молекулярные ножницы»), который удерживает гидовую РНК, сканирует ДНК клетки и вносит <b>двуцепочечный разрыв</b> строго в точке связывания gRNA.</p>
+                                <p><b>Варианты исхода после разреза:</b> Разрыв ДНК запускает в клетке собственные системы репарации. Если не вводить дополнительную матрицу, срабатывает негомологичное соединение концов (NHEJ), часто приводящее к потере/вставке нуклеотидов, сдвигу рамки считывания и полному выключению работы гена — <b>нокауту гена</b>. Если же одновременно ввести здоровую ДНК-матрицу, клетка использует её как шаблон (гомологичная рекомбинация) и исправляет наследственную мутацию.</p>
+                            `
+                        }
+                    },
+                    testsData: {
+                        1: [
+                            { q: "Фермент EcoRI разрезает ДНК по палиндрому 5'-GAATTC-3' между G и A. Какие концы при этом образуются?", options: ["Липкие концы", "Тупые концы", "Кольцевые концы", "РНК-концы"], correct: 0, exp: "Разрез сдвинут от центра симметрии (между G и A на обеих цепях), поэтому остаются одноцепочечные липкие концы AATT." },
+                            { q: "Почему последовательности узнавания большинства рестриктаз называют палиндромами?", options: ["Они читаются одинаково в направлении 5'→3' по обеим цепям ДНК", "Они состоят только из аденина и тимина", "Они встречаются исключительно у бактериофагов", "Они не содержат фосфатных групп"], correct: 0, exp: "Палиндром в молекулярной биологии — идентичное чтение 5'→3' на комплементарных цепях." },
+                            { q: "К какому классу органических соединений относятся рестриктазы?", options: ["Белки (ферменты)", "Нуклеиновые кислоты", "Стероидные гормоны", "Полисахариды"], correct: 0, exp: "Все рестриктазы являются ферментами белковой природы." },
+                            { q: "Какую химическую связь расщепляют рестриктазы в молекуле ДНК?", options: ["Фосфодиэфирную связь", "Пептидную связь", "Водородную связь", "Дисульфидный мостик"], correct: 0, exp: "Рестриктазы разрывают ковалентные фосфодиэфирные связи в сахарофосфатном остове ДНК." },
+                            { q: "Какова природная функция рестриктаз в бактериальной клетке?", options: ["Защита от проникновения чужеродной вирусной ДНК (бактериофагов)", "Синтез молекул АТФ на мембране", "Удвоение собственной кольцевой хромосомы", "Транспорт аминокислот к рибосомам"], correct: 0, exp: "Система рестрикции защищает бактерии от вирусов-бактериофагов, разрезая их ДНК." },
+                            { q: "Каким способом бактерия защищает собственную ДНК от разрезания своими же рестриктазами?", options: ["Метилированием азотистых оснований в сайтах рестрикции", "Изоляцией ДНК внутри двойной ядерной мембраны", "Покрытием хромосомы слоем целлюлозы", "Временным переводом ДНК в одноцепочечную РНК"], correct: 0, exp: "Ферменты ДНК-метилазы присоединяют метильные группы к своей ДНК, блокируя работу рестриктаз." },
+                            { q: "Что образуется, если рестриктаза разрезает обе цепи ДНК строго симметрично напротив друг друга?", options: ["Тупые концы", "Липкие концы", "Праймеры", "Плазмиды"], correct: 0, exp: "Симметричный разрез без выступающих одноцепочечных участков дает тупые концы." },
+                            { q: "За счет каких связей «липкие концы» двух разных фрагментов ДНК способны временно соединяться друг с другом до работы лигазы?", options: ["За счет водородных связей между комплементарными основаниями", "За счет пептидных связей", "За счет ионных связей между фосфатами", "За счет дисульфидных связей"], correct: 0, exp: "Комплементарные основания на выступающих липких концах образуют водородные связи." },
+                            { q: "Из какого организма впервые был выделен классический фермент рестрикции EcoRI?", options: ["Из кишечной палочки (Escherichia coli)", "Из пекарских дрожжей", "Из амебы обыкновенной", "Из табачной мозаики"], correct: 0, exp: "Название EcoRI происходит от Escherichia coli (штамм R, первый выделенный фермент)." },
+                            { q: "Какова типичная длина сайта узнавания (палиндрома) для большинства лабораторных рестриктаз?", options: ["4–8 пар нуклеотидов", "100–200 пар нуклеотидов", "1 нуклеотид", "Более 10 000 пар нуклеотидов"], correct: 0, exp: "Сайты рестрикции обычно представляют собой короткие палиндромы длиной 4–8 п.н." }
+                        ],
+                        2: [
+                            { q: "Установите правильную последовательность этапов получения рекомбинантной плазмиды:\n1) Сшивание фрагментов ДНК-лигазой\n2) Разрезание плазмиды и гена одной рестриктазой\n3) Введение плазмиды в бактериальную клетку (трансформация)", options: ["2 → 1 → 3", "1 → 2 → 3", "3 → 2 → 1", "2 → 3 → 1"], correct: 0, exp: "Сначала режем рестриктазой (2), затем сшиваем лигазой (1), и только потом вводим в бактерию (3)." },
+                            { q: "Почему для вырезания целевого гена и вскрытия плазмидного вектора обычно используют одну и ту же рестриктазу?", options: ["Чтобы образовались комплементарные друг другу липкие концы", "Для экономии лабораторных реактивов", "Чтобы разрушить бактериальную клеточную стенку", "Чтобы остановить репликацию хромосомы"], correct: 0, exp: "Одна рестриктаза создает одинаковые липкие концы, которые легко соединяются по принципу комплементарности." },
+                            { q: "Где в клетке кишечной палочки (E. coli) локализуются плазмиды?", options: ["В цитоплазме автономно от нуклеоида", "Внутри клеточного ядра", "Внутри лизосом", "В цистернах аппарата Гольджи"], correct: 0, exp: "Бактерии — прокариоты, у них нет ядра, поэтому плазмиды находятся в цитоплазме." },
+                            { q: "Какой фермент ковалентно «сшивает» целевой ген с плазмидным вектором?", options: ["ДНК-лигаза", "РНК-полимераза", "Рестриктаза EcoRI", "Обратная транскриптаза"], correct: 0, exp: "ДНК-лигаза восстанавливает фосфодиэфирные связи между фрагментами ДНК." },
+                            { q: "Для чего в структуру лабораторной плазмиды обязательно включают ген устойчивости к антибиотику?", options: ["Для селекции (отбора) бактерий, принявших плазмиду", "Для ускорения синтеза белка на рибосомах", "Для разрезания хромосомы хозяина", "Для защиты бактерий от ультрафиолета"], correct: 0, exp: "На среде с антибиотиком выживут только трансформированные бактерии, поглотившие плазмиду с маркером." },
+                            { q: "Какой элемент плазмиды отвечает за её самостоятельное удвоение в клетке бактерии?", options: ["Сайт инициации репликации (ori)", "Центромера", "Теломера", "Антикодон"], correct: 0, exp: "Точка начала репликации (ori) позволяет плазмиде копироваться независимо от основной хромосомы." },
+                            { q: "Как называется участок плазмидного вектора, содержащий набор уникальных сайтов рестрикции для вставки целевого гена?", options: ["Полилинкер", "Интрон", "Антикодон", "Кристы"], correct: 0, exp: "Полилинкер (сайт множественного клонирования) предназначен для удобной вставки гена." },
+                            { q: "Как называется процесс поглощения бактериальной клеткой чужеродной плазмидной ДНК из окружающей среды?", options: ["Трансформация", "Трансляция", "Транспирация", "Конъюгация"], correct: 0, exp: "Поглощение свободной ДНК (плазмиды) из среды бактерией называется трансформацией." },
+                            { q: "Что представляет собой плазмида по своей химической природе и форме?", options: ["Небольшую кольцевую двуцепочечную молекулу ДНК", "Линейную одноцепочечную молекулу РНК", "Белковую оболочку бактериофага", "Фосфолипидную везикулу"], correct: 0, exp: "Плазмида — кольцевая двуцепочечная внехромосомная ДНК бактерий." },
+                            { q: "Как называется молекула ДНК, полученная искусственно путём объединения в пробирке фрагментов ДНК из разных организмов (например, плазмиды бактерии и гена человека)?", options: ["Рекомбинантная ДНК", "Комплементарная РНК", "Митохондриальная ДНК", "Рибосомная РНК"], correct: 0, exp: "Гибридная молекула ДНК из разных источников называется рекомбинантной ДНК." }
+                        ],
+                        3: [
+                            { q: "В пробирку для ПЦР поместили 3 копии вирусной ДНК. Сколько копий образуется после 4 полных циклов амплификации?", options: ["48 копий", "12 копий", "24 копии", "64 копии"], correct: 0, exp: "Формула: N = N₀ × 2ⁿ. Здесь 3 × 2⁴ = 3 × 16 = 48 копий." },
+                            { q: "На каком этапе цикла ПЦР происходит синтез новых комплементарных цепей ДНК?", options: ["Элонгация (72°C)", "Денатурация (95°C)", "Отжиг праймеров (55°C)", "Охлаждение до 4°C"], correct: 0, exp: "На этапе элонгации при 72°C Taq-полимераза удлиняет цепи ДНК от праймеров." },
+                            { q: "Что произойдет, если в реакционную смесь для ПЦР забыть добавить праймеры?", options: ["ДНК-полимераза не сможет начать синтез новых цепей", "Синтез ДНК пойдет в 2 раза быстрее", "ДНК распадется на свободные аминокислоты", "Произойдет сшивание плазмид в кольцо"], correct: 0, exp: "ДНК-полимераза способна присоединять нуклеотиды только к уже существующей 3'-OH группе праймера." },
+                            { q: "Что происходит на этапе денатурации (94–96°C) в амплификаторе?", options: ["Разрыв водородных связей и расхождение цепей ДНК", "Присоединение праймеров к матрице", "Синтез новых цепей Taq-полимеразой", "Разрушение фосфодиэфирных связей"], correct: 0, exp: "Высокая температура разрывает водородные связи между комплементарными цепями ДНК." },
+                            { q: "Почему в ПЦР используют Taq-полимеразу вместо обычной ДНК-полимеразы человека?", options: ["Она термостабильна и не денатурирует при 95°C", "Она не требует наличия нуклеотидов", "Она синтезирует РНК вместо ДНК", "Она способна работать без праймеров"], correct: 0, exp: "Обычные белки сворачиваются при 95°C на этапе денатурации, а Taq-полимераза выдерживает нагрев." },
+                            { q: "Из какого организма впервые была выделена термостабильная Taq-полимераза?", options: ["Из термофильной бактерии Thermus aquaticus", "Из кишечной палочки человека", "Из пекарских дрожжей", "Из вируса гриппа"], correct: 0, exp: "Thermus aquaticus — бактерия горячих гейзеров, чьи ферменты устойчивы к кипячению." },
+                            { q: "Что происходит на стадии отжига (50–65°C) в цикле ПЦР?", options: ["Комплементарное присоединение праймеров к одноцепочечной ДНК", "Расхождение цепей двуцепочечной ДНК", "Работа рестриктаз", "Разрушение праймеров"], correct: 0, exp: "При охлаждении до 50–65°C праймеры комплементарно связываются с границами целевого участка." },
+                            { q: "В каком направлении Taq-полимераза синтезирует новую цепь ДНК на этапе элонгации?", options: ["Строго от 5'-конца к 3'-концу (5' → 3')", "Строго от 3'-конца к 5'-концу (3' → 5')", "Одновременно в обоих направлениях", "От середины фрагмента к краям"], correct: 0, exp: "Все ДНК-полимеразы присоединяют новые нуклеотиды только к 3'-концу, ведя синтез 5' → 3'." },
+                            { q: "Что служит строительным материалом для синтеза новых цепей ДНК в ПЦР?", options: ["Свободные дезоксирибонуклеотидтрифосфаты (dNTP)", "Свободные аминокислоты", "Рибонуклеотиды с урацилом (UTP)", "Молекулы глюкозы"], correct: 0, exp: "Для сборки ДНК в смесь добавляют dATP, dTTP, dGTP и dCTP." },
+                            { q: "Сколько молекул ДНК образуется из 1 исходной матрицы после 6 циклов ПЦР?", options: ["64 молекулы", "12 молекул", "36 молекул", "32 молекулы"], correct: 0, exp: "2⁶ = 64 копии целевого фрагмента ДНК." }
+                        ],
+                        4: [
+                            { q: "На электрофореграмме обнаружены три полосы ДНК: полоса А ближе всего к лунке старта (катоду), полоса Б посередине, полоса В ближе всего к аноду (+). Какой фрагмент самый длинный?", options: ["Фрагмент А", "Фрагмент Б", "Фрагмент В", "Все фрагменты одинаковой длины"], correct: 0, exp: "Самые длинные и тяжелые фрагменты хуже проходят через поры геля и остаются ближе к старту (катоду)." },
+                            { q: "Какой суммарный заряд имеет молекула ДНК в нейтральном буферном растворе при электрофорезе?", options: ["Отрицательный (–)", "Положительный (+)", "Нейтральный (0)", "Зависит от содержания аденина"], correct: 0, exp: "Отрицательный заряд обусловлен диссоциацией остатков фосфорной кислоты в остове ДНК." },
+                            { q: "Какой метод позволяет узнать точную первичную последовательность нуклеотидов (А, Т, Г, Ц) в выделенном гене?", options: ["Секвенирование", "Электрофорез", "Центрифугирование", "Хроматография"], correct: 0, exp: "Секвенирование устанавливает точный порядок нуклеотидов в цепи ДНК." },
+                            { q: "В каком направлении движутся фрагменты ДНК при проведении гель-электрофореза?", options: ["От катода (–) к аноду (+)", "От анода (+) к катоду (–)", "От центра геля к краям равномерно", "Движение отсутствует"], correct: 0, exp: "Отрицательно заряженная ДНК притягивается к положительно заряженному аноду (+)." },
+                            { q: "За счет какой химической группы в составе нуклеотидов молекула ДНК обладает отрицательным зарядом?", options: ["За счет остатка фосфорной кислоты (фосфатной группы)", "За счет азотистого основания", "За счет дезоксирибозы", "За счет аминогруппы"], correct: 0, exp: "Фосфатные группы в сахарофосфатном остове несут отрицательный заряд." },
+                            { q: "Какой фрагмент ДНК продвинется дальше всего к аноду (+) за одинаковое время электрофореза?", options: ["Фрагмент длиной 150 пар нуклеотидов", "Фрагмент длиной 2500 пар нуклеотидов", "Фрагмент длиной 10 000 пар нуклеотидов", "Все фрагменты пройдут одинаковое расстояние"], correct: 0, exp: "Короткие фрагменты легче проскакивают через поры геля и движутся быстрее." },
+                            { q: "Какое вещество чаще всего используют для приготовления пористого геля при разделении фрагментов ДНК?", options: ["Агарозу", "Крахмал", "Целлюлозу", "Хитин"], correct: 0, exp: "Агарозный гель образует трехмерную сетку с порами, работающую как молекулярное сито." },
+                            { q: "Какую роль играет пористый гель при электрофорезе ДНК?", options: ["Работает как молекулярное сито, разделяя фрагменты по размеру", "Расщепляет ДНК на отдельные нуклеотиды", "Синтезирует копии ДНК", "Меняет заряд ДНК с отрицательного на положительный"], correct: 0, exp: "Гель тормозит крупные молекулы сильнее, чем мелкие, обеспечивая их разделение по длине." },
+                            { q: "Для чего в лунки геля при электрофорезе вместе с образцами вносят «ДНК-маркер» (лестницу)?", options: ["Для определения длины исследуемых фрагментов путём сравнения", "Для ускорения электрического тока", "Для защиты ДНК от рестриктаз", "Для нагревания буферного раствора"], correct: 0, exp: "Маркер содержит набор фрагментов заранее известной длины для калибровки." },
+                            { q: "Как называют классический метод секвенирования ДНК с использованием дидезоксинуклеотидов, обрывающих синтез цепи?", options: ["Метод Сэнгера", "Метод ПЦР", "Метод Блоттинга", "Метод Клонирования"], correct: 0, exp: "Фредерик Сэнгер разработал метод секвенирования ДНК с обрывом цепи (Нобелевская премия)." }
+                        ],
+                        5: [
+                            { q: "Какую роль играет белок Cas9 в системе геномного редактирования?", options: ["Вносит двуцепочечный разрыв в ДНК в месте связывания гидовой РНК", "Узнаёт промотор без участия РНК", "Синтезирует молекулы АТФ", "Транспортирует ДНК через клеточную стенку"], correct: 0, exp: "Cas9 — управляемая РНК эндонуклеаза, разрезающая обе цепи ДНК." },
+                            { q: "Что необходимо изменить ученым при перенастройке системы CRISPR-Cas9 на другой целевой ген?", options: ["Последовательность нуклеотидов в гидовой РНК (gRNA)", "Температуру кипения буферного раствора", "Заменить белок Cas9 на пепсин", "Добавить в среду антибиотик ампициллин"], correct: 0, exp: "Специфичность комплекса определяется последовательностью направляющей (гидовой) РНК." },
+                            { q: "Какое практическое применение имеет технология CRISPR-Cas9 в медицине?", options: ["Исправление наследственных мутаций в клетках", "Измерение артериального давления", "Стерилизация хирургических инструментов", "Синтез витамина С из глюкозы"], correct: 0, exp: "CRISPR-Cas9 применяется для генной терапии наследственных заболеваний (например, серповидноклеточной анемии)." },
+                            { q: "Какую функцию в комплексе CRISPR-Cas9 выполняет гидовая РНК (gRNA)?", options: ["Комплементарно узнаёт целевой участок ДНК и наводит нуклеазу Cas9", "Разрезает фосфодиэфирные связи", "Синтезирует полипептидную цепь на рибосоме", "Переносит аминокислоты"], correct: 0, exp: "Гидовая РНК работает как навигатор, комплементарно связываясь с нужным геном." },
+                            { q: "Какой природный механизм бактерий лёг в основу технологии CRISPR-Cas9?", options: ["Адаптивный иммунитет против вирусов (бактериофагов)", "Хемосинтез", "Спорообразование", "Конъюгация"], correct: 0, exp: "Бактерии сохраняют фрагменты вирусной ДНК в кассетах CRISPR для защиты от повторного заражения." },
+                            { q: "Что происходит при нокауте гена с помощью CRISPR-Cas9?", options: ["Полное выключение работы данного гена из-за ошибки репарации", "Увеличение числа копий гена в 100 раз", "Перенос гена в митохондрию", "Превращение гена в липид"], correct: 0, exp: "Нокаут (knockout) — метод, при котором конкретный ген делается неработоспособным." },
+                            { q: "Какой тип разрыва вносит эндонуклеаза Cas9 в целевую молекулу ДНК?", options: ["Двуцепочечный разрыв", "Одноцепочечный разрыв только в смысловой цепи", "Разрыв водородных связей без разрыва цепей", "Расщепление только рибозы"], correct: 0, exp: "Cas9 разрезает обе цепи ДНК в заданной точке." },
+                            { q: "Что необходимо дополнительно ввести в клетку вместе с комплексом CRISPR-Cas9, чтобы не просто выключить ген, а заменить мутантный участок на здоровый?", options: ["Здоровую ДНК-матрицу (шаблон) для гомологичной рекомбинации", "Дополнительную порцию рестриктазы EcoRI", "Ингибитор ДНК-полимеразы", "Бактериофаг"], correct: 0, exp: "Для точной замены нуклеотидов клетке нужен здоровый шаблон ДНК для репарации." },
+                            { q: "К какому классу ферментов относится белок Cas9?", options: ["К эндонуклеазам", "К оксидоредуктазам", "К лигазам", "К изомеразам"], correct: 0, exp: "Cas9 расщепляет внутренние фосфодиэфирные связи в ДНК, то есть является эндонуклеазой." },
+                            { q: "Где в природе впервые была обнаружена система CRISPR-Cas?", options: ["У бактерий и архей", "У млекопитающих и птиц", "У покрытосеменных растений", "У шляпочных грибов"], correct: 0, exp: "CRISPR-Cas — система противовирусной защиты прокариот (бактерий и архей)." }
+                        ]
+                    },
+                    bossQuestions: [
+                        { q: "Ученый разрезал плазмиду рестриктазой, вставил ген инсулина и забыл добавить ДНК-лигазу. Что произойдет при трансформации бактерий?", options: ["Линейная ДНК быстро разрушится нуклеазами клетки, стабильной рекомбинантной плазмиды не получится", "Бактерии начнут вырабатывать в 2 раза больше инсулина", "Плазмида сама превратится в РНК", "Произойдет ПЦР внутри бактерии"], correct: 0, exp: "Без ДНК-лигазы фосфодиэфирный остов не замыкается в кольцо, и линейная ДНК деградирует в клетке." },
+                        { q: "Сколько циклов ПЦР необходимо провести, чтобы из 1 молекулы ДНК получить минимум 1000 копий?", options: ["10 циклов", "5 циклов", "8 циклов", "100 циклов"], correct: 0, exp: "2⁹ = 512 (мало), а 2¹⁰ = 1024 копии (достаточно)." },
+                        { q: "В каком направлении ДНК-полимераза синтезирует новую цепь ДНК на этапе элонгации ПЦР?", options: ["5' → 3'", "3' → 5'", "В обоих направлениях одновременно", "От центра к краям"], correct: 0, exp: "Все ДНК-полимеразы ведут синтез строго в направлении 5' → 3'." },
+                        { q: "Почему при гель-электрофорезе ДНК движется к аноду (+)?", options: ["Из-за отрицательного заряда фосфатных групп", "Из-за положительного заряда азотистых оснований", "Под действием силы тяжести", "Из-за водородных связей"], correct: 0, exp: "Фосфатные группы несут отрицательный заряд и притягиваются к положительному электроду (аноду)." },
+                        { q: "Какой компонент комплекса CRISPR-Cas9 обеспечивает узнавание конкретной мишени в геноме?", options: ["Гидовая РНК (gRNA)", "Фермент ДНК-лигаза", "Плазмидный маркер", "Taq-полимераза"], correct: 0, exp: "Гидовая РНК комплементарно связывается с целевым участком ДНК." }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Генетическая инженерия белков и биотехнология",
+                    rulesHtml: `
+                        <p class="text-slate-200 font-bold mb-2">Шпаргалка Модуля 2 (Биотехнология):</p>
+                        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
+                            <li><b>Генная инженерия белков:</b> ген → вектор → бактерия → белок (инсулин, соматотропин).</li>
+                            <li><b>Гибридомы:</b> слияние В-лимфоцита с миеломой = моноклональные антитела.</li>
+                            <li><b>Дактилоскопия ДНК:</b> у каждого человека свой набор мини-сателлитов (VNTR).</li>
+                            <li><b>Библиотеки генов:</b> геномная (вся ДНК) и кДНК (только экспрессируемые гены).</li>
+                            <li><b>Биотехнология:</b> ферментация, получение антибиотиков, вакцин, витаминов.</li>
+                        </ul>
+                    `,
+                    tpsmData: {
+                        1: {
+                            name: "Справочник 1 (Мод. 2): Получение белков генной инженерией",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">1. Гуманизированные белки: инсулин и соматотропин</h5>
+                                <p><b>Проблема:</b> Раньше инсулин для лечения диабета выделяли из поджелудочных желез свиней и коров. Такой инсулин отличался по аминокислотной последовательности от человеческого, часто вызывал аллергии, а животных требовалось огромное количество.</p>
+                                <p><b>Решение генной инженерии:</b> Ген человеческого инсулина (или химически синтезированную копию) встраивают в плазмидный вектор, трансформируют им бактерию <i>E. coli</i> или дрожжи. При культивировании на ферментерах микроорганизмы синтезируют человеческий инсулин в промышленных количествах. Аналогично получают <b>соматотропин</b> (гормон роста), фактор VIII свертывания крови, интерфероны и вакцинные белки (например, белок оболочки вируса гепатита B).</p>
+                                <p><b>Этапы получения:</b> 1) Выделение или синтез гена; 2) Встраивание в вектор рестриктазами и лигазой; 3) Трансформация бактерий-продуцентов; 4) Отбор по селективному маркеру; 5) Культивирование в ферментере; 6) Выделение и очистка целевого белка.</p>
+                            `
+                        },
+                        2: {
+                            name: "Справочник 2 (Мод. 2): Гибридомы и моноклональные антитела",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">2. Моноклональные антитела и гибридомы</h5>
+                                <p><b>Антитела (иммуноглобулины):</b> белки лимфоцитов, специфически узнающие антигены. Обычная В-клетка продуцирует только один тип антител, но в культуре быстро погибает.</p>
+                                <p><b>Технология гибридом (Кёлер и Мильштейн, 1975):</b> В-лимфоцит, синтезирующий нужное антитело, сливают с опухолевой (миеломной) клеткой, которая бессмертна. Гибрид — <b>гибридома</b> — объединяет оба свойства: вечно делится и производит одно конкретное <b>моноклональное антитело</b>.</p>
+                                <p><b>Применение:</b> диагностика инфекций и рака (тест-системы на беременность, COVID-19), направленная доставка лекарств к опухоли (коньюгаты «антитело+яд»), иммуноферментный анализ (ИФА).</p>
+                            `
+                        },
+                        3: {
+                            name: "Справочник 3 (Мод. 2): ДНК-дактилоскопия и идентификация",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">3. Геномная дактилоскопия (ДНК-профилирование)</h5>
+                                <p><b>Принцип:</b> В геноме человека есть высокополиморфные участки — <b>минисателлиты (VNTR)</b> и короткие тандемные повторы (STR). Число повторов у каждого человека своё (исключение — однояйцевые близнецы). Вероятность совпадения профилей двух неродственных людей ничтожно мала.</p>
+                                <p><b>Методика:</b> 1) Выделение ДНК даже из микроследов (кровь, слюна, волосяная луковица); 2) ПЦР-амплификация STR-участков; 3) Электрофорез и сравнение длин фрагментов с образцом.</p>
+                                <p><b>Применение:</b> криминалистика (установление преступника), установление отцовства, идентификация останков, освобождение невиновных (ревизия старых дел).</p>
+                            `
+                        },
+                        4: {
+                            name: "Справочник 4 (Мод. 2): Библиотеки генов и трансгенез",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">4. Библиотеки генов и трансгенные организмы</h5>
+                                <p><b>Геномная библиотека:</b> набор клонов, содержащих фрагменты всей ДНК организма (включая некодирующие последовательности). Создаётся разрезанием тотальной ДНК и встраиванием фрагментов в векторы.</p>
+                                <p><b>Библиотека кДНК:</b> строится на основе мРНК через <b>обратную транскриптазу</b> (ревертазу). Содержит только те гены, которые экспрессировались в данной ткани (без интронов). кДНК-библиотеки различны для разных тканей одного организма.</p>
+                                <p><b>Трансгенные организмы:</b> организмы, в геном которых внедрён чужеродный ген. Примеры: овцы и козы, секретирующие человеческие белки с молоком; золотой рис с генами β-каротина; растения с геном Bt-токсина из бактерии <i>Bacillus thuringiensis</i>, устойчивые к насекомым-вредителям.</p>
+                            `
+                        },
+                        5: {
+                            name: "Справочник 5 (Мод. 2): Промышленная биотехнология",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">5. Ферментация, антибиотики и биоэнергетика</h5>
+                                <p><b>Ферментация:</b> промышленное культивирование микроорганизмов в <b>ферментерах</b> (биореакторах) с контролем температуры, pH, аэрации и питания для получения целевого продукта.</p>
+                                <p><b>Антибиотики:</b> вещества, подавляющие рост бактерий и грибов. Первый — <b>пенициллин</b> (А. Флеминг, 1928) из плесневого гриба <i>Penicillium</i>. Сегодня ферментеры дают тонны антибиотиков, а генная инженерия — их улучшенные полусинтетические формы.</p>
+                                <p><b>Иные продукты биотехнологии:</b> витамины (B12, C), аминокислоты (лизин для кормов), ферменты для стиральных порошков, этанол из биомассы, биогаз (метан из отходов), <b>биопластик</b> (полилактид). Направление активно заменяет химический синтез возобновляемым биосинтезом.</p>
+                            `
+                        }
+                    },
+                    testsData: {
+                        1: [
+                            { q: "Какой микроорганизм чаще всего используется как продуцент человеческого инсулина в промышленном получении?", options: ["Кишечная палочка (Escherichia coli)", "Вирус гриппа", "Амёба обыкновенная", "Мукор"], correct: 0, exp: "E. coli быстро делится, хорошо изучена генетически и легко трансформируется плазмидами." },
+                            { q: "Какое преимущество имеет инсулин, полученный методами генной инженерии, перед инсулином из желез животных?", options: ["Он идентичен человеческому и не вызывает аллергических реакций", "Он дешевле в крахмале", "Он не требует введения", "Он действует мгновенно"], correct: 0, exp: "Генно-инженерный инсулин по аминокислотной последовательности совпадает с человеческим." },
+                            { q: "Правильная последовательность получения инсулина методами генной инженерии:\n1) Трансформация бактерий\n2) Встраивание гена в плазмиду\n3) Очистка белка", options: ["2 → 1 → 3", "1 → 2 → 3", "3 → 2 → 1", "2 → 3 → 1"], correct: 0, exp: "Сначала собирают вектор с геном (2), затем вводят в бактерии (1), потом культивируют и чистят продукт (3)." },
+                            { q: "Какой гормон, помимо инсулина, получают генно-инженерным способом для лечения карликовости?", options: ["Соматотропин (гормон роста)", "Инсулин", "Адреналин", "Тироксин"], correct: 0, "exp": "Раньше соматотропин выделяли из гипофизов трупов, что было опасно (прионы); рекомбинантный гормон безопасен.", },
+                            { q: "Что такое ферментер (биореактор)?", options: ["Аппарат для промышленного культивирования микроорганизмов-продуцентов", "Прибор для электрофореза ДНК", "Машина для секвенирования", "Центрифуга для разделения крови"], correct: 0, exp: "В ферментере поддерживаются оптимальные температура, pH, аэрация и питание культуры." },
+                            { q: "Какой белок свёртывания крови получают рекомбинантным путём для лечения гемофилии?", options: ["Фактор VIII", "Гемоглобин", "Фибриноген животного", "Альбумин"], correct: 0, exp: "Рекомбинантный фактор VIII избавил пациентов от риска заражения от донорской плазмы." },
+                            { q: "Вакцина против гепатита B нового поколения содержит:", options: ["Рекомбинантный поверхностный белок вируса, синтезированный дрожжами", "Живой вирус гепатита B", "Полный геном вируса", "Антитела против печени"], correct: 0, exp: "Дрожжи-продуценты, секретирующие HBsAg, — классика субъединичных вакцин." },
+                            { q: "Почему до эпохи генной инженерии получение соматотропина было опасным?", options: ["Препарат из гипофизов трупов мог содержать прионы", "Он вызывал диабет", "Его не умели синтезировать химически", "Он мгновенно распадался"], correct: 0, exp: "Известны случаи заражения прионной инфекцией (Куру) от трупного гормона роста." },
+                            { q: "Интерфероны, применяемые в терапии, получают:", options: ["Генно-инженерными бактериями и культурами клеток", "Выделением из крови больных", "Синтезом из мела", "Экстракцией из печени акулы"], correct: 0, exp: "Рекомбинантные интерфероны (α, β, γ) производят промышленные штаммы-продуценты." },
+                            { q: "Что этап «отбор по селективному маркеру» означает при получении продуцента?", options: ["Отбирают только те клетки, которые приняли плазмиду с геном устойчивости к антибиотику", "Отбирают самые крупные колонии на глаз", "Отбирают клетки, погибшие на среде с антибиотиком", "Отбирают клетки по цвету"], correct: 0, exp: "Выживают на среде с антибиотиком только трансформанты, несущие маркер из плазмиды." }
+                        ],
+                        2: [
+                            { q: "Гибридома — это клетка, полученная слиянием:", options: ["В-лимфоцита с миеломной (опухолевой) клеткой", "Т-лимфоцита с эритроцитом", "Макрофага с тромбоцитом", "Стволовой клетки с нейроном"], correct: 0, exp: "От лимфоцита — способность производить антитело, от миеломы — бессмертие в культуре." },
+                            { q: "Что позволяет гибридоме делиться в культуре неограниченно?", options: ["Опухолевая природа миеломного партнёра", "Добавление инсулина", "Наличие кольцевой плазмиды", "Присутствие антигена"], correct: 0, exp: "Миеломные клетки лишены механизмов старения и лимита Хейфлика." },
+                            { q: "Моноклональные антитела называют моноклональными, потому что они:", options: ["Вырабатываются клоном гибридом и идентичны по структуре", "Содержат один атом металла", "Действуют на один орган", "Имеют мономерное строение"], correct: 0, exp: "Все молекулы — копии продукта одного гена одного клона." },
+                            { q: "Кто разработал технологию гибридом?", options: ["Кёлер и Мильштейн (1975)", "Уотсон и Крик", "Мендель и Морган", "Пастер и Кох"], correct: 0, exp: "За эту работу Кёлер и Мильштейн получили Нобелевскую премию 1984 года." },
+                            { q: "Экспресс-тест на беременность и ИФА-диагностика инфекций основаны на:", options: ["Моноклональных антителах", "Рестриктазах", "Taq-полимеразе", "Плазмидах"], correct: 0, exp: "МКА специфически связывают ХГЧ или антигены возбудителя — появляется цветная полоса." },
+                            { q: "Какое применение моноклональных антител в терапии рака?", options: ["Направленная доставка цитотоксика точно к опухолевым клеткам", "Замена химиотерапии сахаром", "Облучение опухоли изнутри", "Переливание крови"], correct: 0, exp: "Конъюгаты «антитело + токсин/радиоизотоп» узнают только антиген опухоли, щадя здоровые клетки." },
+                            { q: "Обычный В-лимфоцит не годится для промышленного производства антител, потому что:", options: ["Он быстро погибает в культуре", "Он слишком крупный", "Он производит много разных антител и не делится", "Он боится кислорода"], correct: 0, exp: "Лимфоциты теряют способность к делению вне организма — гибридома решает проблему." },
+                            { q: "Для получения гибридомы, производящей нужное антитело, мышь сначала:", options: ["Иммунизируют конкретным антигеном", "Облучают рентгеном", "Кормят антибиотиками", "Охлаждают до 4°C"], correct: 0, exp: "Антиген запускает клональную экспансию В-лимфоцитов против этого антигена." },
+                            { q: "Иммуноферментный анализ (ИФА) использует:", options: ["Связку «антиген-антитело» + ферментную метку для цветного сигнала", "Электрический ток в геле", "Радиоактивные изотопы фосфора", "Ультразвук"], correct: 0, exp: "Фермент (пероксидаза хрена) на антителе окрашивает субстрат при связывании." },
+                            { q: "Что происходит с миеломной клеткой при слиянии в гибридому с В-лимфоцитом?", options: ["Она передаёт партнёру бессмертие, получив от него ген антитела", "Она погибает сразу", "Она превращается в бактерию", "Она начинает фотосинтез"], correct: 0, exp: "Гибрид получает свойства обеих родительских клеток." }
+                        ],
+                        3: [
+                            { q: "Дактилоскопия ДНК основана на анализе:", options: ["Полиморфных тандемных повторов (STR/VNTR)", "Группы крови", "Отпечатков пальцев", "Формы ушей"], correct: 0, exp: "Число тандемных повторов индивидуально и наследуется." },
+                            { q: "ДНК-профили однояйцевых (идентичных) близнецов:", options: ["Совпадают", "Различаются сильнее, чем у чужих людей", "Различаются на 50%", "Не могут быть проанализированы"], correct: 0, exp: "Близнецы возникают из одной зиготы — геномы идентичны." },
+                            { q: "Какой метод позволяет наработать ДНК для дактилоскопии из микроследа?", options: ["ПЦР", "Электрофорез", "Центрифугирование", "Экстракция белка"], correct: 0, exp: "ПЦР амплифицирует ДНК из единичных молекул — идеален для криминалистики." },
+                            { q: "Установление отцовства методом ДНК-профилирования основано на том, что ребёнок:", options: ["Получает половину аллелей от отца и половину от матери", "Имеет ДНК только матери", "Имеет ДНК только отца", "Имеет полностью новую ДНК"], correct: 0, exp: "В профиле ребёнка каждый аллель должен совпасть либо с материнским, либо с отцовским профилем." },
+                            { q: "Отрицательно заряженные фрагменты ДНК при электрофорезе движутся:", options: ["От катода (–) к аноду (+)", "От анода (+) к катоду (–)", "Случайно", "Вниз под тяжестью"], correct: 0, exp: "ДНК несёт отрицательный заряд за счёт фосфатных групп." },
+                            { q: "Вероятность случайного совпадения ДНК-профилей двух неродственных людей:", options: ["Практически нулевая (один на миллиарды)", "Примерно 50%", "Один к десяти", "Сто процентов"], correct: 0, exp: "Комбинация из 13–20 STR-локаторов уникальна, кроме однояйцевых близнецов." },
+                            { q: "Из какого источника НЕЛЬЗЯ выделить ДНК для идентификации?", options: ["Срезанные ногти (кератин без ядер)", "Волосяная луковица", "Слюна", "Кровь"], correct: 0, exp: "В ногтевой пластине — мёртвый кератин без ядер; нужна луковица с клетками." },
+                            { q: "Что такое VNTR-локус?", options: ["Участок с переменным числом тандемных повторов", "Ген рибосомной РНК", "Белок крови", "Фермент бактерии"], correct: 0, exp: "Количество повторов у каждого человека своё — основа индивидуальности профиля." },
+                            { q: "Первое дело, где ДНК-дактилоскопия доказала вину, относится к методу:", options: ["Сравнения профилей подозреваемых с биоматериалом с места преступления", "Опроса свидетелей", "Гипноза", "Детектора лжи"], correct: 0, exp: "Колин Питчфолк, 1988 — первое осуждение по ДНК-доказательствам." },
+                            { q: "Ревизия старых уголовных дел с помощью ДНК-анализа привела к:", options: ["Реабилитации невиновно осуждённых", "Закрытию всех судов", "Запрету экспертиз", "Отмене суда присяжных"], correct: 0, exp: "Проект «Невиновность» (Innocence Project) освободил сотни людей по ДНК-тестам." }
+                        ],
+                        4: [
+                            { q: "Геномная библиотека содержит:", options: ["Фрагменты всей ДНК организма, включая некодирующую", "Только гены печени", "Только гены бактерий", "Только РНК"], correct: 0, exp: "Она представляет весь геном случайными клонированными фрагментами." },
+                            { q: "Библиотека кДНК строится из мРНК с помощью фермента:", options: ["Обратной транскриптазы (ревертазы)", "ДНК-лигазы", "Рестриктазы EcoRI", "Taq-полимеразы"], correct: 0, exp: "Ревертаза синтезирует комплементарную ДНК на матрице мРНК." },
+                            { q: "Чем кДНК-ген отличается от исходного гена эукариот?", options: ["В нём нет интронов", "В нём больше интронов", "Он не содержит экзонов", "Он не содержит тимина"], correct: 0, exp: "мРНК уже прошла сплайсинг — кДНК содержит только кодирующие экзоны." },
+                            { q: "Библиотеки кДНК разных тканей одного организма:", options: ["Различаются, так как экспрессируются разные гены", "Идентичны", "Не существуют", "Состоят из белков"], correct: 0, exp: "В нейронах экспрессируются одни гены, в печени — другие." },
+                            { q: "Трансгенный организм — это организм:", options: ["Содержащий внедрённый чужеродный ген", "Полученный только скрещиванием", "Мутант без ДНК", "Выросший в пробирке"], correct: 0, exp: "Трансген вводят искусственно в геном." },
+                            { q: "Золотой рис получил название из-за гена:", options: ["β-каротина (провитамина A)", "Хлорофилла", "Гемоглобина", "Инсулина"], correct: 0, exp: "Золотой рис синтезирует β-каротин — спасение от куриной слепоты в бедных странах." },
+                            { q: "Bt-растения устойчивы к насекомым благодаря гену из бактерии:", options: ["Bacillus thuringiensis", "E. coli", "Thermus aquaticus", "Penicillium"], correct: 0, exp: "Bt-токсин убивает гусениц, безвреден для человека." },
+                            { q: "Каких животных используют для получения человеческих белков с молоком?", options: ["Овец, коз, коров с геном белка в молочных генах", "Акул и китов", "Лабораторных мышей-альбиносов для инсулина", "Птиц"], correct: 0, exp: "Ген белка помещают под промотор молочного белка — продукт выходит с молоком." },
+                            { q: "Зачем в геном трансгенного растения ген белка встраивают под сильный промотор?", options: ["Чтобы обеспечить высокую экспрессию (синтез) белка", "Чтобы растение светилось", "Чтобы замедлить рост", "Для красоты"], correct: 0, exp: "Промотор определяет уровень считывания гена в РНК." },
+                            { q: "Основной аргумент ЗА трансгенные культуры:", options: ["Меньше пестицидов и выше урожайность при том же наделе", "Они синего цвета", "Они не требуют воды", "Они лечат рак при употреблении"], correct: 0, exp: "Bt-хлопок и Roundup-ready соя резко снижают обработку ядохимикатами." }
+                        ],
+                        5: [
+                            { q: "Пенициллин был открыт из гриба рода:", options: ["Penicillium", "Aspergillus", "Mucor", "Saccharomyces"], correct: 0, exp: "А. Флеминг в 1928 заметил гибель стафилококков вокруг плесени Penicillium notatum." },
+                            { q: "Промышленное получение антибиотиков происходит в:", options: ["Ферментерах (биореакторах)", "Электрофорезных камерах", "ПЦР-амплификаторах", "Холодильниках"], correct: 0, exp: "Ферментер обеспечивает питание, аэрацию и оптимальную среду." },
+                            { q: "Биогаз в основном состоит из:", options: ["Метана (CH₄)", "Кислорода", "Азота", "Водорода"], correct: 0, exp: "Метаногенные архаи разлагают органику отходов." },
+                            { q: "Что такое биопластик (полилактид)?", options: ["Пластик, синтезируемый бактериями из возобновляемого сырья", "Обычный пластик с добавкой крахмала цвета", "Стекло", "Металл"], correct: 0, exp: "Полилактид получают ферментацией сахара в молочную кислоту." },
+                            { q: "Аминокислоту лизин в промышленных масштабах производят для:", options: ["Кормов животным (пополнение незаменимой аминокислоты)", "Заправки самолётов", "Производства стекла", "Охлаждения процессоров"], correct: 0, exp: "Лизин незаменим — его добавка удешевляет кормовой белок." },
+                            { q: "Витамин B12 синтезируют:", options: ["Микроорганизмы (пропионовокислые бактерии)", "Растения", "Грибы-трутовики", "Млекопитающие"], correct: 0, exp: "B12 — продукт исключительно микробного синтеза." },
+                            { q: "Ферменты для стиральных порошков (протеазы, липазы) получают:", options: ["Культивированием микробов-продуцентов", "Добычей из бычьих желудков", "Химическим синтезом из нефти", "Выпариванием морской воды"], correct: 0, exp: "Микробные ферменты работают при низких температурах — экономия энергии при стирке." },
+                            { q: "Биоэтанол получают:", options: ["Ферментацией растительной биомассы дрожжами", "Перегонкой нефти", "Электролизом воды", "Синтезом из метана"], correct: 0, exp: "Дрожжи сбраживают сахара в этанол — возобновляемое топливо." },
+                            { q: "Кто открыл пенициллин?", options: ["Александр Флеминг", "Луи Пастер", "Роберт Кох", "Илья Мечников"], correct: 0, exp: "Флеминг, 1928; массовое производство наладили во время ВМВ." },
+                            { q: "Преимущество биосинтеза перед химическим синтезом в фармацевтике:", options: ["Высокая стереоспецифичность и мягкие условия", "Всегда дешевле", "Не требует контроля", "Работает только в космосе"], correct: 0, exp: "Ферменты дают чистые изомеры без побочных продуктов при комнатной температуре." }
+                        ]
+                    },
+                    bossQuestions: [
+                        { q: "Модуль 2. Для промышленного получения человеческого инсулина ген человека встраивают в:", options: ["Плазмиду бактерии-продуцента", "Геном вируса оспы", "Хромосому человека", "Митохондрию дрожжей"], correct: 0, exp: "Классическая схема: ген → плазмида → E. coli → продукт." },
+                        { q: "Модуль 2. Гибридома получается слиянием В-лимфоцита с:", options: ["Миеломной клеткой", "Эритроцитом", "Гепатоцитом", "Бактерией"], correct: 0, exp: "От миеломы — бессмертие, от лимфоцита — производство специфического антитела." },
+                        { q: "Модуль 2. кДНК-библиотека не содержит интронов, потому что строится на основе:", options: ["Сплайсированной мРНК", "Тотальной геномной ДНК", "Рибосомной РНК", "Белков"], correct: 0, exp: "Обратная транскриптаза копирует зрелую мРНК без интронов." },
+                        { q: "Модуль 2. STR-профилирование для криминалистики анализирует:", options: ["Число тандемных повторов в полиморфных локусах", "Группу крови", "Цвет глаз", "Массу тела"], correct: 0, exp: "Индивидуальная комбинация длин STR-аллелей." },
+                        { q: "Модуль 2. Золотой рис содержит гены пути синтеза:", options: ["β-каротина", "Кофеина", "Никотина", "Крахмала"], correct: 0, exp: "β-каротин — предшественник витамина A." }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Биосинтез белка и матричные синтезы — ХАРД",
+                    rulesHtml: `
+                        <p class="text-slate-200 font-bold mb-2">Хард-шпаргалка (задачи ЕГЭ №27):</p>
+                        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
+                            <li><b>1 АК = 3 нуклеотида иРНК</b> (триплет). Стоп-кодон АК не кодирует!</li>
+                            <li><b>Длина:</b> 1 нуклеотид = 0,34 нм. <b>Масса:</b> нуклеотид ≈ 345 Да, АК ≈ 110 Да.</li>
+                            <li><b>Связи:</b> А=Т — 2 водородные, Г≡Ц — 3 водородные.</li>
+                            <li><b>Комплементарность иРНК с матричной цепью:</b> А→У, Т→А, Г→Ц, Ц→Г; цепи антипараллельны (3'→5' и 5'→3').</li>
+                            <li><b>Антикодон тРНК</b> комплементарен кодону иРНК.</li>
+                        </ul>
+                    `,
+                    tpsmData: {
+                        1: {
+                            name: "Хард 1: Генетический код на максималках",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">1. Свойства кода и ловушки №27</h5>
+                                <p><b>64 триплета:</b> 61 смысловой + 3 стоп (УАА, УАГ, УГА). <b>АУГ</b> — метионин и старт. Поэтому белок из N аминокислот кодируется N+1 кодонами (последний — стоп!).</p>
+                                <p><b>Вырожденность:</b> одной АК соответствует несколько кодонов (кроме метионина и триптофана). Следствие: замена 3-го нуклеотида триплета часто НЕ меняет аминокислоту — мутация «молчит».</p>
+                                <p><b>Однозначность + вырожденность:</b> каждый кодон шифрует ровно одну АК, но обратное неверно. <b>Универсальность:</b> код одинаков у всех организмов — потому ген человека работает в бактерии.</p>
+                                <p><b>Ловушка на проценты:</b> проценты нуклеотидов иРНК напрямую пересчитываются в проценты ДНК: А(ДНК, обе цепи суммарно) = У(иРНК), Т(ДНК) = А(иРНК), а Г+Ц в ДНК = Г+Ц в иРНК.</p>
+                            `
+                        },
+                        2: {
+                            name: "Хард 2: Репликация ДНК до деталей",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">2. Репликация: ферменты, вилки, Оказаки</h5>
+                                <p><b>Ферменты:</b> геликаза (расплетает), ДНК-полимераза (синтез 5'→3'), ДНК-лигаза (сшивает), праймаза (РНК-затравка).</p>
+                                <p><b>Полуконсервативность</b> (Мезельсон–Стааль): в каждой дочерней спирали одна цепь старая, одна новая. После 2 репликаций из 1 молекулы: 2 гибридные + 2 полностью новые.</p>
+                                <p><b>Фрагменты Оказаки:</b> отстающая цепь синтезируется кусочками, т.к. полимераза работает только 5'→3'. <b>Теломеры</b> — концевые повторы, защищают от укорочения.</p>
+                            `
+                        },
+                        3: {
+                            name: "Хард 3: Транскрипция и антипараллельность",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">3. Считывание с учётом направления</h5>
+                                <p><b>Матричная цепь ДНК</b> читается 3'→5', иРНК синтезируется 5'→3'. Пример: матричная 3'-АЦГТАЦГТА-5' → иРНК 5'-УГЦАУГЦАУ-3'.</p>
+                                <p><b>РНК-полимераза</b> садится на промотор. У эукариот первичный транскрипт (про-иРНК) проходит процессинг: кэп, поли-А, сплайсинг (вырезание интронов).</p>
+                                <p><b>Старт-кодон АУГ</b> на иРНК соответствует триплету <b>ТАЦ</b> в матричной цепи ДНК — классика задач.</p>
+                            `
+                        },
+                        4: {
+                            name: "Хард 4: Трансляция — тонкости",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">4. Рибосома, тРНК, энергия</h5>
+                                <p><b>тРНК:</b> антикодон в центре, АК на 3'-конце; присоединение АК к тРНК — 1 АТФ (аминоацил-тРНК-синтетаза). Число задействованных тРНК = числу кодонов (минус стоп!).</p>
+                                <p><b>Рибосома 80S</b> = 40S + 60S, движется по иРНК 5'→3'; сайты A (вход) и P (пептидил). Стоп-кодон узнаёт белок-фактор терминации, а НЕ тРНК.</p>
+                                <p><b>Полисома</b> — десятки рибосом на одной иРНК → взрывная скорость синтеза. <b>Сигнальный пептид</b> (гидрофобный N-конец) направляет белок в ЭПС.</p>
+                            `
+                        },
+                        5: {
+                            name: "Хард 5: Полный разбор формул расчёта",
+                            text: `
+                                <h5 class="text-emerald-400 font-extrabold text-base mb-2">5. Формулы и типовые расчёты</h5>
+                                <p>• <b>АК → нуклеотиды иРНК:</b> (АК + 1 стоп) × 3. <b>Ген (2 цепи):</b> × 2.</p>
+                                <p>• <b>Длина</b> иРНК/гена: n × 0,34 нм. <b>Масса гена:</b> n × 345 Да. <b>Масса белка:</b> АК × 110 Да.</p>
+                                <p>• <b>Водородные связи:</b> 2 × (пары А-Т) + 3 × (пары Г-Ц).</p>
+                                <p>• <b>Пример:</b> белок 130 АК → нуклеотидов в двухцепочечном гене = (130+1) × 3 × 2 = <b>786</b>.</p>
+                                <p>• <b>Пример:</b> в одной цепи ДНК А=40, Г=60 → вторая цепь Т=40, Ц=60 → связи = 2×80 + 3×120 = <b>520</b>.</p>
+                            `
+                        }
+                    },
+                    testsData: {
+                        1: [
+                            { q: "Белок состоит из 120 аминокислот. Сколько кодонов в иРНК, кодирующей его, с учётом стоп-кодона?", options: ["121", "120", "360", "122"], correct: 0, exp: "Каждая АК — 1 кодон (120) + 1 стоп-кодон, который АК не кодирует. Итого 121." },
+                            { q: "В иРНК 1500 нуклеотидов. Какое число аминокислот в белке (в иРНК есть один стоп-кодон)?", options: ["499", "500", "1500", "475"], correct: 0, exp: "1500 / 3 = 500 триплетов; один из них стоп → 499 аминокислот." },
+                            { q: "Почему замена ТРЕТЬЕГО нуклеотида в триплете часто не изменяет аминокислоту?", options: ["Из-за вырожденности генетического кода", "Из-за универсальности кода", "Из-за триплетности", "Третий нуклеотид не читается"], correct: 0, exp: "Многие кодоны, различающиеся 3-м нуклеотидом, шифруют одну и ту же АК — это вырожденность." },
+                            { q: "Ген человека работает в бактерии, потому что генетический код:", options: ["Универсален", "Вырожден", "Триплетен", "Неперекрывающийся"], correct: 0, exp: "Одни и те же триплеты шифруют одни и те же АК у всех организмов." },
+                            { q: "Сколько молекул тРНК участвует в синтезе полипептида из 50 аминокислот (стоп не учитываем)?", options: ["50", "150", "17", "51"], correct: 0, exp: "Каждую аминокислоту приносит своя тРНК — 50 тРНК." },
+                            { q: "Кодон УУЦ. Какой антикодон ему комплементарен?", options: ["ААГ", "УУЦ", "ТТЦ", "ЦЦА"], correct: 0, exp: "По принципу комплементарности У-А, У-А, Ц-Г → ААГ." },
+                            { q: "В иРНК аденина 35%, урацила 20%. Сколько процентов суммарно гуанина и цитозина?", options: ["45%", "55%", "35%", "65%"], correct: 0, exp: "А + У = 55% → на Г + Ц остаётся 100 − 55 = 45%." },
+                            { q: "Двойная роль кодона АУГ:", options: ["Метионин и старт синтеза", "Стоп и старт", "Валин и лейцин", "Лизин и стоп"], correct: 0, exp: "АУГ — первый кодон трансляции и кодон метионина." },
+                            { q: "Сколько всего стоп-кодонов в генетическом коде?", options: ["3", "1", "20", "61"], correct: 0, exp: "УАА, УАГ, УГА — три бессмысленных (стоп) кодона." },
+                            { q: "В матричной цепи ДНК старт-кодону АУГ соответствует триплет:", options: ["ТАЦ", "АТГ", "ТАЦГ", "УАЦ"], correct: 0, exp: "А→Т, У→А, Г→Ц: АУГ иРНК = ТАЦ в матричной ДНК." }
+                        ],
+                        2: [
+                            { q: "Матричная цепь ДНК: 3'-АЦГТАЦГТА-5'. Какова иРНК (с учётом антипараллельности)?", options: ["5'-УГЦАУГЦАУ-3'", "5'-АЦГТАЦГТА-3'", "5'-ТГЦАТГЦАТ-3'", "5'-УАЦГУАУАЦ-3'"], correct: 0, exp: "Комплементарно каждой букве (А→У, Ц→Г, Г→Ц, Т→А) и в обратном порядке направлений." },
+                            { q: "Фермент, расплетающий двойную спираль ДНК при репликации:", options: ["Геликаза", "Лигаза", "Праймаза", "Рестриктаза"], correct: 0, exp: "Геликаза разрывает водородные связи между цепями." },
+                            { q: "В одной цепи ДНК А=40, Г=60. Сколько водородных связей в двухцепочечном участке?", options: ["520", "260", "200", "300"], correct: 0, exp: "А-Т пар 80 → 160 связей; Г-Ц пар 120 → 360 связей; итого 520." },
+                            { q: "Фрагменты Оказаки образуются потому, что:", options: ["ДНК-полимераза синтезирует только 5'→3'", "Геликаза режет ДНК", "Лигаза ошибается", "РНК не имеет направления"], correct: 0, exp: "На отстающей цепи синтез идёт короткими кусками против движения вилки." },
+                            { q: "После ДВУХ полуконсервативных репликаций одной молекулы ДНК образуется:", options: ["2 гибридные и 2 полностью новые молекулы", "4 гибридные молекулы", "4 полностью новые молекулы", "1 гибридная и 3 новые"], correct: 0, exp: "Каждый раз новая цепь достраивается на старой: после 2 циклов — 2 гибрида + 2 новые." },
+                            { q: "Роль праймазы при репликации:", options: ["Создаёт РНК-затравку для ДНК-полимеразы", "Сшивает фрагменты Оказаки", "Исправляет ошибки", "Разрезает ДНК"], correct: 0, exp: "ДНК-полимераза не начинает с нуля — нужна РНК-затравка (праймер)." },
+                            { q: "Про-иРНК эукариот превращается в зрелую иРНК в результате:", options: ["Процессинга (кэп, поли-А, сплайсинг)", "Трансляции", "Репликации", "Рестрикции"], correct: 0, exp: "Интроны вырезаются, экзоны сшиваются — это сплайсинг." },
+                            { q: "Теломеры нужны, чтобы:", options: ["Защитить концы линейных хромосом от укорочения", "Кодировать белки", "Синтезировать АТФ", "Убирать интроны"], correct: 0, exp: "При каждом копировании концы теряются — теломерные повторы жертвуют собой." },
+                            { q: "Полимераза, осуществляющая транскрипцию:", options: ["РНК-полимераза", "ДНК-полимераза", "Обратная транскриптаза", "Топоизомераза"], correct: 0, exp: "РНК-полимераза считывает матричную цепь ДНК и строит иРНК." },
+                            { q: "Смысловая цепь ДНК называется смысловой, потому что:", options: ["Совпадает по последовательности с иРНК (Т вместо У)", "Служит матрицей для иРНК", "Не участвует в синтезе", "Содержит только интроны"], correct: 0, exp: "Матрицей служит вторая (матричная) цепь, а смысловая совпадает с иРНК." }
+                        ],
+                        3: [
+                            { q: "Полипептид из 200 аминокислот. Сколько кодонов в иРНК вместе со стоп-кодоном?", options: ["201", "200", "600", "199"], correct: 0, exp: "200 смысловых кодонов + 1 стоп = 201." },
+                            { q: "На присоединение одной аминокислоты к тРНК расходуется:", options: ["1 АТФ (аминоацил-тРНК-синтетаза)", "0 энергозатрат", "38 АТФ", "2 ГТФ"], correct: 0, exp: "Активация АК — 1 макроэргическая связь АТФ на каждую аминокислоту." },
+                            { q: "Кодон УУЦ встречается в иРНК 7 раз. Сколько тРНК с антикодоном ААГ потребуется?", options: ["7", "1", "3", "21"], correct: 0, exp: "Каждый кодон узнавался своей тРНК — 7 молекул." },
+                            { q: "Рибосома движется по иРНК в направлении:", options: ["5' → 3'", "3' → 5'", "Обоими концами", "Зигзагом"], correct: 0, exp: "Синтез белка идёт от 5'-конца иРНК к 3'-концу." },
+                            { q: "Стоп-кодон при терминации узнаёт:", options: ["Белок-фактор терминации (не тРНК)", "Тип тРНК без аминокислоты", "Сама рибосома", "иРНК сама останавливается"], correct: 0, exp: "К стоп-кодону тРНК не подходит — приходят белки-факторы, полипептид освобождается." },
+                            { q: "Сигнальный пептид в начале белка нужен для:", options: ["Направления белка в ЭПС (шприц-путь секреции)", "Остановки синтеза", "Прикрепления АК к тРНК", "Сплайсинга"], correct: 0, exp: "Гидрофобный N-конец узнаётся каналом ЭПС — белок идёт на экспорт." },
+                            { q: "Полисома — это:", options: ["Несколько рибосом, читающих одну иРНК одновременно", "Большая рибосома", "Комплекс ДНК с белками", "Пузырёк Гольджи"], correct: 0, exp: "Конвейер: множество рибосом на одной иРНК резко ускоряют синтез." },
+                            { q: "Эукариотическая рибосома (80S) состоит из субъединиц:", options: ["40S + 60S", "30S + 50S", "20S + 60S", "Двух 40S"], correct: 0, exp: "80S = маленькая 40S + большая 60S (S — единицы Сведберга)." },
+                            { q: "Аминокислота прикрепляется к тРНК ферментом:", options: ["Аминоацил-тРНК-синтетазой", "Пептидилтрансферазой", "Геликазой", "Ревертазой"], correct: 0, exp: "Этот фермент специфичен к паре «АК — тРНК» и тратит АТФ." },
+                            { q: "Первую аминокислоту (метионин) приносит:", options: ["Инициаторная тРНК в P-сайт", "Любая тРНК в A-сайт", "иРНК напрямую", "Факторы терминации"], correct: 0, exp: "Инициаторная метионин-тРНК сразу садится в P-сайт." }
+                        ],
+                        4: [
+                            { q: "Белок из 250 аминокислот (без стопа). Длина кодирующей иРНК?", options: ["255 нм", "250 нм", "85 нм", "750 нм"], correct: 0, exp: "250 × 3 = 750 нуклеотидов × 0,34 нм = 255 нм." },
+                            { q: "Масса белка 11000 Да. Сколько нуклеотидов в его иРНК (с учётом стоп-кодона)?", options: ["303", "300", "100", "310"], correct: 0, exp: "11000 / 110 = 100 АК → (100 + 1) × 3 = 303 нуклеотида." },
+                            { q: "Двухцепочечная ДНК имеет 2000 водородных связей, из них Г-Ц пар 300. Сколько пар А-Т?", options: ["550", "500", "700", "350"], correct: 0, exp: "Г-Ц: 3 × 300 = 900 связей → на А-Т остаётся 1100 → 1100/2 = 550 пар." },
+                            { q: "Масса одной цепи фрагмента ДНК 103500 Да. Длина этого фрагмента?", options: ["102 нм", "300 нм", "51 нм", "204 нм"], correct: 0, exp: "103500 / 345 = 300 нуклеотидов × 0,34 = 102 нм." },
+                            { q: "В гене 270 нуклеотидов (есть один стоп-кодон). Сколько аминокислот в белке?", options: ["89", "90", "270", "87"], correct: 0, exp: "270 / 3 = 90 триплетов − 1 стоп = 89 аминокислот." },
+                            { q: "В иРНК А=25%, У=35%, Г=20%. Сколько % цитозина в соответствующей двухцепочечной ДНК?", options: ["20%", "25%", "35%", "40%"], correct: 0, exp: "Ц(иРНК) = 100−25−35−20 = 20%. А Г+Ц ДНК = Г+Ц иРНК → Ц ДНК = (20+20)/2 = 20%." },
+                            { q: "Белок из 150 аминокислот. Сколько нуклеотидов в двухцепочечном гене (со стоп-кодоном)?", options: ["906", "450", "900", "453"], correct: 0, exp: "(150 + 1) × 3 = 453 в одной цепи × 2 = 906." },
+                            { q: "Гемоглобин — 574 аминокислоты. Минимум сколько тРНК участвует в синтезе?", options: ["574", "1722", "575", "573"], correct: 0, exp: "На каждую аминокислоту — своя тРНК (стоп-кодон тРНК не читает)." },
+                            { q: "В иРНК Г=30%, Ц=40%. Сколько суммарно % А+Т в двухцепочечной ДНК?", options: ["30%", "60%", "70%", "50%"], correct: 0, exp: "А+У иРНК = 100 − 30 − 40 = 30% → А+Т ДНК = 30% (правило Чаргаффа)." },
+                            { q: "Матричная цепь 3'-ЦТААГГТАЦ-5'. иРНК будет:", options: ["5'-ГАУУЦЦАУГ-3'", "5'-ЦТААГГТАЦ-3'", "5'-ГАТТЦЦАТГ-3'", "5'-ЦАТТГГЦАТ-3'"], correct: 0, exp: "Комплементарно каждой букве и антипараллельно: Г-А-У-У-Ц-Ц-А-У-Г." }
+                        ],
+                        5: [
+                            { q: "Матричная ДНК: 3'-ТАЦГЦАТТЦАГТ-5'. Первые ДВЕ аминокислоты белка?", options: ["Метионин – аргинин", "Валин – глицин", "Метионин – аланин", "Тирозин – аргинин"], correct: 0, exp: "иРНК 5'-АУГЦГУААГ...-3': АУГ = метионин, ЦГУ = аргинин." },
+                            { q: "В иРНК 36 нуклеотидов (один стоп-кодон). Сколько аминокислот в белке?", options: ["11", "12", "36", "10"], correct: 0, exp: "36 / 3 = 12 триплетов − 1 стоп = 11 аминокислот." },
+                            { q: "Антикодоны тРНК: УГЦ, ААГ, ЦЦА. Последовательность иРНК?", options: ["5'-АЦГУУЦГУУ-3'", "5'-УГЦААГЦЦА-3'", "5'-АГЦУУЦЦАА-3'", "5'-ТГЦААГЦЦА-3'"], correct: 0, exp: "Каждый кодон комплементарен своему антикодону: АЦГ + УУЦ + ГУУ." },
+                            { q: "Выпадение ОДНОГО нуклеотида из гена опаснее замены, потому что:", options: ["Происходит сдвиг рамки считывания всей последующей иРНК", "Нуклеотиды не могут выпадать", "Стоп-кодоны исчезают навсегда", "Рибосома ломается"], correct: 0, exp: "Рамка сдвигается — все кодоны после делеции читаются неверно." },
+                            { q: "Замена нуклеотида, превратившая смысловой кодон в стоп-кодон, называется:", options: ["Нонсенс-мутация", "Миссенс-мутация", "Тихая мутация", "Инверсия"], correct: 0, exp: "Нонсенс = обрыв синтеза белка на этом месте." },
+                            { q: "Белок из 71 аминокислоты. Сколько нуклеотидов в двухцепочечном гене (со стопом)?", options: ["432", "216", "213", "426"], correct: 0, exp: "(71 + 1) × 3 = 216 в одной цепи × 2 = 432." },
+                            { q: "В ДНК на гуанин приходится 23%. Сколько % аденина?", options: ["27%", "23%", "54%", "46%"], correct: 0, exp: "Г = Ц = 23% → А + Т = 54% → А = Т = 27%." },
+                            { q: "Молчаливая (тихая) мутация — это когда:", options: ["Аминокислота в белке НЕ изменилась", "Белок стал короче", "Изменилась только ДНК-матрица иРНК-полимеразы", "Возник стоп-кодон"], correct: 0, exp: "Из-за вырожденности кодона замена нуклеотида даёт ту же АК." },
+                            { q: "Сколько кодонов иРНК кодируют белок из 500 АК, включая стопы (в середине стопов нет)?", options: ["501", "500", "1500", "503"], correct: 0, exp: "500 смысловых + 1 терминальный = 501." },
+                            { q: "В двухцепочечном участке 300 пар нуклеотидов, из них Г-Ц пар 120. Всего водородных связей?", options: ["720", "600", "900", "780"], correct: 0, exp: "3 × 120 + 2 × 180 = 360 + 360 = 720 связей." }
+                        ]
+                    },
+                    bossQuestions: [
+                        { q: "ХАРД. Белок из 130 аминокислот. Сколько нуклеотидов в двухцепочечном гене (со стоп-кодоном)?", options: ["786", "390", "792", "780"], correct: 0, exp: "(130 + 1) × 3 × 2 = 786 нуклеотидов." },
+                        { q: "ХАРД. Матричная ДНК 3'-ААГЦТТГАЦ-5'. Аминокислоты в начале белка?", options: ["Фен – Глу – Лей", "Лей – Арг – Вал", "Фен – Арг – Лей", "Лиз – Глу – Вал"], correct: 0, exp: "иРНК 5'-УУЦГААЦУГ-3': УУЦ=фен, ГАА=глу, ЦУГ=лей." },
+                        { q: "ХАРД. После двух полуконсервативных репликаций доля гибридных молекул (одна старая + одна новая цепь):", options: ["50%", "100%", "25%", "75%"], correct: 0, exp: "4 молекулы: 2 гибридные + 2 новые → 2/4 = 50%." },
+                        { q: "ХАРД. В иРНК У=32%, Г=18%. Сколько % А+Т в ДНК?", options: ["50%", "32%", "68%", "18%"], correct: 0, exp: "А+У иРНК = 100 − 32 − 18 = 50% → А+Т ДНК = 50%." },
+                        { q: "ХАРД. Белок из 64 АК. Минимум сколько молекул тРНК и сколько кодонов участвует?", options: ["64 тРНК и 65 кодонов", "64 тРНК и 64 кодона", "192 тРНК и 65 кодонов", "63 тРНК и 64 кодона"], correct: 0, exp: "Трансляция: 64 тРНК (по одной на АК), а в иРНК 64 + 1 стоп = 65 кодонов." }
+                    ]
+                }
+            ]
+        };
+
+        // ==========================================
+        // 6. УПРАВЛЕНИЕ ПРОГРЕССОМ И СОСТОЯНИЕМ
+        // ==========================================
+        function getProgressData() {
+            try {
+                const saved = localStorage.getItem('exam_plus_progress_v2');
+                return saved ? JSON.parse(saved) : {};
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function saveCompletedStep(subjectName, themeId, stepKey) {
+            const progress = getProgressData();
+            if (!progress[subjectName]) progress[subjectName] = {};
+            if (!progress[subjectName][themeId]) progress[subjectName][themeId] = [];
+            
+            if (!progress[subjectName][themeId].includes(stepKey)) {
+                progress[subjectName][themeId].push(stepKey);
+            }
+            localStorage.setItem('exam_plus_progress_v2', JSON.stringify(progress));
+        }
+
+        function calculateSubjectProgressPercent(subjectName) {
+            const progress = getProgressData();
+            const themesList = subjectThemesData[subjectName] || [];
+            if (themesList.length === 0) return 0;
+
+            let completedCount = 0;
+            const totalSteps = themesList.length * 11; // на каждый модуль: 5 Конспектов + 5 Тестов + 1 Финал
+
+            themesList.forEach(theme => {
+                const completedInTheme = (progress[subjectName] && progress[subjectName][theme.id]) ? progress[subjectName][theme.id].length : 0;
+                completedCount += completedInTheme;
+            });
+
+            return Math.min(100, Math.round((completedCount / totalSteps) * 100));
+        }
+
+        let currentFactIndex = 0;
+        let activeSubject = subjects[0];
+        let currentThemeIndex = 0;
+
+        function isModuleUnlocked(idx) {
+            if (idx <= 0) return true;
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const progressData = getProgressData();
+            const doneData = progressData[activeSubject.name] || {};
+            for (let i = 0; i < idx; i++) {
+                const theme = themes[i];
+                if (!theme || !(doneData[theme.id] && doneData[theme.id].includes('boss'))) return false;
+            }
+            return true;
+        }
+
+        function switchModule(idx) {
+            const themes = subjectThemesData[activeSubject.name] || [];
+            if (!themes[idx]) return;
+            // Модуль открывается только после сдачи финала предыдущего
+            if (!isModuleUnlocked(idx)) return;
+            currentThemeIndex = idx;
+            renderPathMap();
+        }
+
+        function refreshModuleSwitcher() {
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const container = document.getElementById('module-switcher');
+            if (!container) return;
+            const progressData = getProgressData();
+            const doneData = progressData[activeSubject.name] || {};
+
+            container.innerHTML = '';
+            themes.forEach((theme, idx) => {
+                const unlocked = isModuleUnlocked(idx);
+                const isActive = idx === currentThemeIndex;
+                let style;
+                if (isActive) {
+                    style = 'px-3.5 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-emerald-500 text-slate-950 cursor-pointer transition-all';
+                } else if (unlocked) {
+                    style = 'px-3.5 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider text-slate-400 hover:text-white cursor-pointer transition-all';
+                } else {
+                    style = 'px-3.5 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider text-slate-500 cursor-not-allowed transition-all';
+                }
+                container.innerHTML += `<button onclick="switchModule(${idx})" class="${style}">Модуль ${idx + 1}${unlocked ? '' : ' 🔒'}</button>`;
+            });
+        }
+
+        let activeStepNum = null;
+        let testMode = 'normal'; // 'normal' | 'boss' | 'mistakes'
+
+        let currentTestQuestions = [];
+        let currentQuestionIndex = 0;
+        let correctAnswersCount = 0;
+        let isAnsweringLocked = false;
+
+        function selectSubject(name) {
+            const found = subjects.find(s => s.name === name);
+            if (found) {
+                activeSubject = found;
+                updateSubjectProgressUI();
+            }
+        }
+
+        function updateSubjectProgressUI() {
+            const percent = calculateSubjectProgressPercent(activeSubject.name);
+            document.getElementById('selected-subject-name').innerText = activeSubject.name;
+            document.getElementById('progress-percent').innerText = `${percent}%`;
+            document.getElementById('subject-emoji').innerText = activeSubject.emoji;
+            document.getElementById('progress-bar').style.width = `${percent}%`;
+            renderUserSubjects();
+        }
+
+        function renderDeck() {
+            const container = document.getElementById('deck-container');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            subjects.forEach((subj, i) => {
+                const isSelected = subj.name === activeSubject.name;
+                const percent = calculateSubjectProgressPercent(subj.name);
+                const bgClass = isSelected 
+                    ? 'bg-slate-900/95 border-emerald-400 text-slate-100 shadow-2xl scale-[1.02] border-2' 
+                    : 'bg-slate-900/60 border-slate-800 text-slate-300 shadow-lg opacity-80 border hover:opacity-100';
+                
+                const topOffset = i * 64; 
+
+                container.innerHTML += `
+                    <div onclick="selectSubject('${subj.name}'); renderDeck();" 
+                         style="top: ${topOffset}px; left: 0px; z-index: ${isSelected ? 20 : 10 - i};"
+                         class="absolute w-full card-slide ${bgClass} rounded-2xl py-4 px-5 cursor-pointer flex items-center justify-between group">
+                        <div class="flex items-center gap-3.5">
+                            <span class="text-2xl select-none group-hover:scale-110 transition-transform">${subj.emoji}</span>
+                            <div>
+                                <span class="font-bold text-sm sm:text-base tracking-wide block">${subj.name}</span>
+                                <span class="text-xs text-emerald-400 font-semibold">Пройдено: ${percent}%</span>
+                            </div>
+                        </div>
+                        <span class="text-xs opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-emerald-400 font-bold">→</span>
+                    </div>
+                `;
+            });
+        }
+
+        function renderUserSubjects() {
+            const listContainer = document.getElementById('user-subjects-list');
+            if (!listContainer) return;
+            listContainer.innerHTML = '';
+            let totalPercentSum = 0;
+
+            subjects.forEach(s => {
+                const percent = calculateSubjectProgressPercent(s.name);
+                totalPercentSum += percent;
+                listContainer.innerHTML += `
+                    <div onclick="selectSubject('${s.name}'); renderDeck();" class="bg-slate-950/70 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between hover:border-emerald-500/40 transition-colors cursor-pointer">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-lg">${s.emoji}</span>
+                                <span class="font-bold text-xs text-slate-200">${s.name}</span>
+                            </div>
+                            <span class="text-xs font-extrabold accent-text">${percent}%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                            <div class="accent-bg h-full rounded-full transition-all duration-500" style="width: ${percent}%;"></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            const overallProgress = Math.round(totalPercentSum / subjects.length);
+            document.getElementById('total-progress-percent').innerText = `${overallProgress}%`;
+        }
+
+        function nextFact() {
+            currentFactIndex = (currentFactIndex + 1) % facts.length;
+            const factElem = document.getElementById('fact-text');
+            if (factElem) factElem.innerText = facts[currentFactIndex];
+        }
+
+        function goToPathScreen() {
+            document.getElementById('screen-main').classList.add('hidden');
+            document.getElementById('screen-path').classList.remove('hidden');
+            document.getElementById('screen-path').classList.add('flex');
+            
+            document.getElementById('path-subject-title').innerText = activeSubject.name;
+            document.getElementById('path-subject-emoji').innerText = activeSubject.emoji;
+
+            currentThemeIndex = 0;
+            renderPathMap();
+        }
+
+        function goToMainScreen() {
+            document.getElementById('screen-path').classList.add('hidden');
+            document.getElementById('screen-path').classList.remove('flex');
+            document.getElementById('screen-main').classList.remove('hidden');
+            updateSubjectProgressUI();
+            renderDeck();
+            updateMistakesUI();
+            refreshStreakUI();
+        }
+
+        // РЕНДЕР 11 ЭТАПОВ (ТЕОРИЯ -> ТЕСТ -> ... -> ФИНАЛ)
+        function renderPathMap() {
+            const themes = subjectThemesData[activeSubject.name] || [];
+            if (!themes.length) return;
+
+            // Защита: если текущий модуль ещё не открыт (например, прогресс сброшен) — откат на Модуль 1
+            const progressData = getProgressData();
+            if (currentThemeIndex > 0 && !isModuleUnlocked(currentThemeIndex)) {
+                currentThemeIndex = 0;
+            }
+
+            const theme = themes[currentThemeIndex];
+            if (!theme) return;
+
+            const completedSteps = (progressData[activeSubject.name] && progressData[activeSubject.name][theme.id]) 
+                ? progressData[activeSubject.name][theme.id] 
+                : [];
+
+            document.getElementById('current-theme-title').innerText = theme.title;
+            refreshModuleSwitcher();
+
+            const container = document.getElementById('levels-container');
+            container.innerHTML = '';
+
+            let previousPassed = true;
+
+            for (let i = 1; i <= 5; i++) {
+                const tpsmKey = `tpsm_${i}`;
+                const isTpsmPassed = completedSteps.includes(tpsmKey);
+                const isTpsmUnlocked = previousPassed;
+                const isTpsmActive = isTpsmUnlocked && !isTpsmPassed;
+
+                let tpsmStyle = "bg-slate-950 border-2 border-slate-800 text-slate-600 opacity-50 cursor-not-allowed";
+                if (isTpsmPassed) {
+                    tpsmStyle = "bg-teal-500 border-2 border-teal-300 text-slate-950 cursor-pointer hover:scale-105 shadow-lg shadow-teal-500/30";
+                } else if (isTpsmUnlocked) {
+                    tpsmStyle = "bg-emerald-500 border-2 border-emerald-300 text-slate-950 cursor-pointer active-level-pulse hover:scale-105 shadow-lg shadow-emerald-500/40";
+                }
+
+                container.innerHTML += `
+                    <div ${isTpsmActive ? 'id="active-map-node"' : ''} onclick="${isTpsmUnlocked || isTpsmPassed ? `openTpsmModal(${i})` : ''}" class="flex flex-col items-center gap-1.5 shrink-0">
+                        <div class="w-20 h-20 rounded-2xl ${tpsmStyle} flex flex-col items-center justify-center select-none font-extrabold text-xs transition-all">
+                            <span class="text-2xl leading-none mb-1">${isTpsmPassed ? '✅' : '📖'}</span>
+                            <span>Теория ${i}</span>
+                        </div>
+                    </div>
+                `;
+
+                container.innerHTML += `<div class="text-emerald-400/60 font-black text-base shrink-0 px-0.5">→</div>`;
+                previousPassed = isTpsmPassed;
+
+                const testKey = `test_${i}`;
+                const isTestPassed = completedSteps.includes(testKey);
+                const isTestUnlocked = previousPassed;
+                const isTestActive = isTestUnlocked && !isTestPassed;
+
+                let testStyle = "bg-slate-950 border-2 border-slate-800 text-slate-600 opacity-50 cursor-not-allowed";
+                if (isTestPassed) {
+                    testStyle = "bg-emerald-500 border-2 border-emerald-300 text-slate-950 cursor-pointer hover:scale-105 shadow-lg shadow-emerald-500/30";
+                } else if (isTestUnlocked) {
+                    testStyle = "bg-amber-500 border-2 border-amber-300 text-slate-950 cursor-pointer active-level-pulse hover:scale-105 shadow-lg shadow-amber-500/40";
+                }
+
+                container.innerHTML += `
+                    <div ${isTestActive ? 'id="active-map-node"' : ''} onclick="${isTestUnlocked || isTestPassed ? `openMainTestModal(${i})` : ''}" class="flex flex-col items-center gap-1.5 shrink-0">
+                        <div class="w-20 h-20 rounded-2xl ${testStyle} flex flex-col items-center justify-center select-none font-extrabold text-xs transition-all">
+                            <span class="text-2xl leading-none mb-1">${isTestPassed ? '✅' : '🎯'}</span>
+                            <span>Тест ${i}</span>
+                        </div>
+                    </div>
+                `;
+
+                container.innerHTML += `<div class="text-emerald-400/60 font-black text-base shrink-0 px-0.5">→</div>`;
+                previousPassed = isTestPassed;
+            }
+
+            const isBossPassed = completedSteps.includes('boss');
+            const isBossUnlocked = previousPassed;
+            const isBossActive = isBossUnlocked && !isBossPassed;
+
+            let bossStyle = "bg-slate-950 border-2 border-slate-800 text-slate-600 opacity-50 cursor-not-allowed";
+            if (isBossPassed) {
+                bossStyle = "bg-amber-400 border-2 border-amber-200 text-slate-950 cursor-pointer hover:scale-105 shadow-lg shadow-amber-500/40";
+            } else if (isBossUnlocked) {
+                bossStyle = "bg-gradient-to-tr from-amber-500 to-yellow-400 border-2 border-yellow-200 text-slate-950 cursor-pointer active-level-pulse hover:scale-105 shadow-xl shadow-amber-500/40";
+            }
+
+            container.innerHTML += `
+                <div ${isBossActive ? 'id="active-map-node"' : ''} onclick="${isBossUnlocked || isBossPassed ? `startBoss()` : ''}" class="flex flex-col items-center gap-1.5 shrink-0">
+                    <div class="w-28 h-20 ${bossStyle} rounded-2xl flex flex-col items-center justify-center font-black text-sm select-none transition-all">
+                        <span class="text-2xl leading-none mb-1">🏆</span>
+                        <span>Финал</span>
+                    </div>
+                </div>
+            `;
+
+            setTimeout(() => {
+                const activeNode = document.getElementById('active-map-node');
+                if (activeNode) {
+                    activeNode.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+            }, 100);
+        }
+
+        // ==========================================
+        // 7. ЛОГИКА СПРАВОЧНОГО МАТЕРИАЛА (СПЛОШНОЙ ТЕКСТ)
+        // ==========================================
+        function openTpsmModal(num) {
+            activeStepNum = num;
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const theme = themes[currentThemeIndex];
+
+            if (theme && theme.tpsmData && theme.tpsmData[num]) {
+                const rawTpsm = theme.tpsmData[num];
+
+                document.getElementById('pre-level-title').innerHTML = `<span class="accent-text text-xl sm:text-2xl">📖</span> ${rawTpsm.name}`;
+                document.getElementById('pre-level-guide-text').innerHTML = rawTpsm.text;
+
+                const guideContainer = document.getElementById('pre-level-guide-text');
+                guideContainer.scrollTop = 0;
+
+                document.getElementById('modal-pre-level').classList.remove('hidden');
+            }
+        }
+
+        function closePreLevelModal() {
+            document.getElementById('modal-pre-level').classList.add('hidden');
+        }
+
+        // Кнопка «Я готов!»: закрывает окно справочника,
+        // засчитывает теорию и открывает доступ к следующему уровню (Тесту N).
+        function completeGuide() {
+            playSound('correct');
+            closePreLevelModal();
+
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const theme = themes[currentThemeIndex];
+
+            saveCompletedStep(activeSubject.name, theme.id, `tpsm_${activeStepNum}`);
+            registerDailyLevelCompletion();
+            renderPathMap();
+        }
+
+        // ==========================================
+        // 8. ОСНОВНЫЕ ТЕСТЫ (10 ВОПРОСОВ), ФИНАЛ И РАБОТА НАД ОШИБКАМИ
+        // ==========================================
+        function openMainTestModal(num) {
+            testMode = 'normal';
+            activeStepNum = num;
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const theme = themes[currentThemeIndex];
+
+            if (theme && theme.testsData && theme.testsData[num]) {
+                currentTestQuestions = theme.testsData[num].map(q => ({
+                    ...prepareShuffledQuestion(q),
+                    rawRef: q
+                }));
+                currentQuestionIndex = 0;
+                correctAnswersCount = 0;
+
+                document.getElementById('test-title-badge').innerText = `Практический Тест ${num}`;
+                document.getElementById('modal-test').classList.remove('hidden');
+                loadQuestion();
+            }
+        }
+
+        function startBoss() {
+            testMode = 'boss';
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const theme = themes[currentThemeIndex];
+
+            if (theme && theme.bossQuestions) {
+                currentTestQuestions = theme.bossQuestions.map(q => ({
+                    ...prepareShuffledQuestion(q),
+                    rawRef: q
+                }));
+                currentQuestionIndex = 0;
+                correctAnswersCount = 0;
+
+                document.getElementById('test-title-badge').innerText = `🏆 Финальный зачёт по разделу`;
+                document.getElementById('modal-test').classList.remove('hidden');
+                loadQuestion();
+            }
+        }
+
+        function startMistakesTraining() {
+            const bank = getMistakesBank();
+            if (bank.length === 0) {
+                playSound('correct');
+                document.getElementById('mascot-speech').innerText = "У тебя пока нет ни одной ошибки! Проходи справочники и Тесты — если где-то промахнёшься, мы разберём этот вопрос здесь.";
+                return;
+            }
+
+            testMode = 'mistakes';
+            currentTestQuestions = bank.map(q => ({
+                ...prepareShuffledQuestion(q),
+                rawRef: q,
+                subjectName: q.subject
+            }));
+            currentQuestionIndex = 0;
+            correctAnswersCount = 0;
+
+            document.getElementById('test-title-badge').innerText = `🩹 Работа над ошибками (${bank.length})`;
+            document.getElementById('modal-test').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            isAnsweringLocked = false;
+            document.getElementById('error-explanation-box').classList.add('hidden');
+
+            if (currentQuestionIndex >= currentTestQuestions.length) {
+                evaluateTestResult();
+                return;
+            }
+
+            const qData = currentTestQuestions[currentQuestionIndex];
+            const subjectTag = (testMode === 'mistakes' && qData.subjectName) ? `[${qData.subjectName}]\n` : '';
+            
+            document.getElementById('test-counter').innerText = `Вопрос ${currentQuestionIndex + 1} из ${currentTestQuestions.length}`;
+            document.getElementById('test-question-text').innerText = subjectTag + qData.q;
+            
+            const progressPercent = ((currentQuestionIndex + 1) / currentTestQuestions.length) * 100;
+            document.getElementById('test-progress-bar').style.width = `${progressPercent}%`;
+
+            const optionsContainer = document.getElementById('test-options-container');
+            optionsContainer.innerHTML = '';
+
+            qData.options.forEach((opt, idx) => {
+                optionsContainer.innerHTML += `
+                    <button id="opt-btn-${idx}" onclick="checkAnswer(${idx}, ${qData.correct})" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-emerald-400 rounded-2xl font-medium text-sm sm:text-base text-slate-200 transition-all cursor-pointer active:scale-[0.99]">
+                        <span class="font-bold text-emerald-400 mr-2">${idx + 1}.</span> ${opt}
+                    </button>
+                `;
+            });
+        }
+
+        function checkAnswer(selectedIndex, correctIndex) {
+            if (isAnsweringLocked) return;
+            isAnsweringLocked = true;
+
+            const qData = currentTestQuestions[currentQuestionIndex];
+            const selectedBtn = document.getElementById(`opt-btn-${selectedIndex}`);
+            
+            if (selectedIndex === correctIndex) {
+                playSound('correct');
+                if (selectedBtn) {
+                    selectedBtn.classList.remove('border-slate-800');
+                    selectedBtn.classList.add('border-emerald-400', 'bg-emerald-500/20', 'text-white');
+                }
+                correctAnswersCount++;
+
+                if (testMode === 'mistakes') {
+                    removeMistake(qData.q);
+                }
+
+                setTimeout(() => {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }, 400);
+            } else {
+                playSound('wrong');
+                if (testMode !== 'mistakes') {
+                    recordMistake(qData.rawRef, activeSubject.name);
+                }
+
+                if (selectedBtn) {
+                    selectedBtn.classList.remove('border-slate-800');
+                    selectedBtn.classList.add('border-rose-500', 'bg-rose-500/20');
+                }
+                const correctBtn = document.getElementById(`opt-btn-${correctIndex}`);
+                if (correctBtn) {
+                    correctBtn.classList.remove('border-slate-800');
+                    correctBtn.classList.add('border-emerald-400', 'bg-emerald-500/15');
+                }
+                document.getElementById('error-explanation-text').innerText = qData.exp || ("Правильный ответ: " + qData.options[correctIndex]);
+                document.getElementById('error-explanation-box').classList.remove('hidden');
+            }
+        }
+
+        function nextQuestionAfterError() {
+            currentQuestionIndex++;
+            loadQuestion();
+        }
+
+        function evaluateTestResult() {
+            const optionsContainer = document.getElementById('test-options-container');
+            document.getElementById('error-explanation-box').classList.add('hidden');
+
+            if (testMode === 'mistakes') {
+                const remaining = getMistakesBank().length;
+                playSound('win');
+                document.getElementById('test-question-text').innerHTML = remaining === 0
+                    ? `<span class="text-emerald-400">Все ошибки полностью исправлены! 🎉</span>`
+                    : `<span class="text-amber-400">Часть ошибок исправлена! Осталось: ${remaining}</span>`;
+                document.getElementById('test-counter').innerText = `Готово`;
+
+                optionsContainer.innerHTML = `
+                    <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 text-center space-y-2">
+                        <p class="text-slate-300 font-medium text-sm">Решено без ошибок: <b class="accent-text">${correctAnswersCount} из ${currentTestQuestions.length}</b>.</p>
+                    </div>
+                    <div class="mt-4">
+                        ${remaining > 0 
+                            ? `<button onclick="startMistakesTraining()" class="w-full py-3.5 bg-rose-500 hover:bg-rose-400 text-white font-black rounded-2xl transition-all cursor-pointer text-sm">Дорешать оставшиеся (${remaining}) 🔄</button>`
+                            : `<button onclick="closeTestModal()" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-2xl transition-all cursor-pointer text-sm">Вернуться на главную 🚀</button>`
+                        }
+                    </div>
+                `;
+                return;
+            }
+
+            if (correctAnswersCount === currentTestQuestions.length) {
+                playSound('win');
+                finishTestSuccess();
+            } else {
+                document.getElementById('test-question-text').innerHTML = `
+                    <span class="text-amber-400">Для зачёта нужно ответить без ошибок!</span>
+                `;
+                document.getElementById('test-counter').innerText = `Результат`;
+                
+                optionsContainer.innerHTML = `
+                    <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 text-center space-y-2">
+                        <p class="text-slate-300 font-medium text-sm">Вы ответили верно на <b class="accent-text">${correctAnswersCount} из ${currentTestQuestions.length}</b> вопросов.</p>
+                        <p class="text-xs text-slate-400">Ошибки сохранены в раздел «Работа над ошибками» на главном экране.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                        ${testMode === 'normal' ? `
+                        <button onclick="closeTestModal(); openTpsmModal(${activeStepNum});" class="py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-2xl transition-all cursor-pointer text-sm">
+                            📖 Перечитать Теорию ${activeStepNum}
+                        </button>` : ''}
+                        <button onclick="${testMode === 'boss' ? 'startBoss()' : `openMainTestModal(${activeStepNum})`}" class="${testMode === 'boss' ? 'col-span-2' : ''} py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-2xl transition-all cursor-pointer text-sm">
+                            Пройти заново 🔄
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        function finishTestSuccess() {
+            closeTestModal();
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const theme = themes[currentThemeIndex];
+            
+            const isNewDayStreak = registerDailyLevelCompletion();
+
+            if (testMode === 'boss') {
+                saveCompletedStep(activeSubject.name, theme.id, 'boss');
+                document.getElementById('mascot-speech').innerText = `Поздравляю! Ты блестяще сдал финальный зачёт по разделу «${activeSubject.name}»!`;
+            } else {
+                saveCompletedStep(activeSubject.name, theme.id, `test_${activeStepNum}`);
+                if (isNewDayStreak) {
+                    document.getElementById('mascot-speech').innerText = `Тест сдан на 100%! Сегодняшний Био-Стрик официально засчитан!`;
+                }
+            }
+            renderPathMap();
+        }
+
+        function closeTestModal() {
+            document.getElementById('modal-test').classList.add('hidden');
+            updateMistakesUI();
+        }
+
+        function openRulesModal() {
+            const themes = subjectThemesData[activeSubject.name] || [];
+            const theme = themes[currentThemeIndex];
+            if (!theme) return;
+            document.getElementById('rules-modal-title').innerHTML = `<span class="accent-text text-2xl">❓</span> Шпаргалка по теме`;
+            document.getElementById('rules-modal-content').innerHTML = theme.rulesHtml;
+            document.getElementById('modal-rules').classList.remove('hidden');
+        }
+
+        function closeRulesModal() {
+            document.getElementById('modal-rules').classList.add('hidden');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('exam_plus_theme') || 'emerald';
+            setAppTheme(savedTheme);
+            refreshStreakUI();
+            updateMistakesUI();
+
+            selectSubject(subjects[0].name);
+            renderDeck();
+            updateSubjectProgressUI();
+            document.getElementById('fact-text').innerText = facts[0];
+        });
+    </script>
+</body>
+</html>
